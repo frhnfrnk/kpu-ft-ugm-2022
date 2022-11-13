@@ -1,4 +1,3 @@
-import './App.css';
 import { Routes , Route, BrowserRouter as Router } from "react-router-dom";
 import Beranda from './pages/Beranda';
 import Error from './pages/Error';
@@ -14,11 +13,11 @@ function App() {
         <Router>
           <Header />
           <Routes>
-            <Route path="/" element={<Beranda />} />
-            <Route path="/error" element={<Error />} />
-            <Route path="/info-calon" element={<InfoCalon />} />
-            <Route path="/terimakasih" element={<Terimakasih />} />
-            <Route path="/tentang" element={<Tentang />} />
+            <Route exact path="/beranda" element={<Beranda />} />
+            <Route exact path="/error" element={<Error />} />
+            <Route exact path="/info-calon" element={<InfoCalon />} />
+            <Route exact path="/terimakasih" element={<Terimakasih />} />
+            <Route exact path="/tentang" element={<Tentang />} />
           </Routes>
         </Router>
       </>

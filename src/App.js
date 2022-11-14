@@ -5,7 +5,9 @@ import InfoCalon from './pages/InfoCalon';
 import Terimakasih from './pages/Terimakasih';
 import Tentang from './pages/Tentang';
 import Header from './components/Header/header';
+import Footer from "./components/Footer/footer";
 
+import './index.css';
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
             <Route exact path="/terimakasih" element={<Terimakasih />} />
             <Route exact path="/tentang" element={<Tentang />} />
           </Routes>
+          <Footer />
         </Router>
       </>
   );

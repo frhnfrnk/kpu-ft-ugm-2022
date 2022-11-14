@@ -14,6 +14,7 @@ module.exports = {
       },
       fontFamily: {
         Lato: ['Lato', ...defaultTheme.fontFamily.sans],
+        "Playfair": ['Playfair Display', "serif"]
       },
     },
   },

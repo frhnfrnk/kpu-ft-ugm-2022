@@ -2,7 +2,6 @@
 function Beranda() {
   return (
     <>
-
     </>
   );
 }

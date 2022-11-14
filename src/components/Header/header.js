@@ -15,6 +15,8 @@ export default function Header(){
     const [isScroll, setIsScroll] = useState(false)
     const [activeLink, setActiveLink] = useState("")
     const [normalLink, setNormalLink] = useState("")
+    const activeLinkMobile = "text-[red] font-bold"
+    const normalLinkMobile = "text-[#fefefe] font-normal"
 
     const [isOpen, setIsOpen] = useState(false);
     const [navStyle, setNavStyle] = useState('menu h-[auto] absolute top-[-200px] transition-all duration-500 bg-[#35455D] w-full -z-0 lg:hidden');
@@ -75,8 +77,8 @@ export default function Header(){
                 <div className={navStyle}>
                 {MenuItems.map((item, index) => {
                             return (
-                                <li key={index}>
-                                    <NavLink to={item.url} end className={({isActive}) => (isActive ? activeLink : normalLink)} >
+                                <li className='list-none' key={index}>
+                                    <NavLink to={item.url} end className={({isActive}) => (isActive ? activeLinkMobile : normalLinkMobile)} >
                                         <div className={menuStyle} id={item.id}>{item.label}</div>
                                     </NavLink>
                                 </li>

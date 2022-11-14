@@ -22,3 +22,23 @@ code {
 .font-Playfair {
   font-family: 'Playfair Display', serif;
 }
+
+.font-Lato{
+  font-family: 'Lato', sans-serif;
+}
+
+
+body {
+  overflow-y: scroll;
+  scrollbar-color: #E1DAD1;
+} 
+
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 5vmin;
+  background-color:  #BFB196;
+}

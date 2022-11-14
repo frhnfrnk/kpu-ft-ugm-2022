@@ -22,7 +22,7 @@ export default function Header(){
     const [navStyle, setNavStyle] = useState('menu h-[auto] absolute top-[-200px] transition-all duration-500 bg-[#35455D] w-full -z-0 lg:hidden');
 
     const menuStyle = 'h-10 flex justify-center items-center py-6 text-[#e8e4e3] text-sm active:bg-[#E1DAD1] active:text-[#8A2d2d]'
-    const menuStyle2 = 'menu-nav text-sm  hover:text-[#8A2d2d] mx-6'
+    const menuStyle2 = 'menu-nav text-md hover:text-[#8A2d2d] mx-6'
 
     // text-[#2a374a]
 
@@ -60,11 +60,11 @@ export default function Header(){
 
     return (
         <>
-            <header className={`h-auto w-full bg-[#35455D] font-Lato lg:flex z-50 lg:justify-between lg:items-center lg:px-[150px] fixed transition-all ${isScroll ? "lg:bg-[35455D]" : "lg:bg-transparent"}`}>
+            <header className={`h-[calc(0.5rem+6vmin)] w-full bg-[#35455D] font-Lato lg:flex z-50 lg:justify-between lg:items-center lg:px-[150px] fixed transition-all ${isScroll ? "lg:bg-[35455D]" : "lg:bg-transparent"}`}>
                 <div className='h-16 flex justify-between px-5 '>
                     <div className='flex justify-center items-center'>
-                        <img src={Logo} className="h-7 pr-2"/>
-                        <h1 className={` text-[#e8e4e3] font-bold  text-xs ${isScroll ? "lg:text-[#E1DAD1]" : "lg:text-[#2a374a]"}`}>KPUFT UGM 2022</h1>
+                        <img src={Logo} className="h-9 pr-4"/>
+                        <h1 className={` text-[#e8e4e3] font-bold  text-md ${isScroll ? "lg:text-[#E1DAD1]" : "lg:text-[#2a374a]"}`}>KPUFT UGM 2022</h1>
                     </div>
                     <div 
                         onClick={()=>setIsOpen(!isOpen)}  

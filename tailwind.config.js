@@ -13,7 +13,7 @@ module.exports = {
         sm: '425px',
       },
       fontFamily: {
-        Lato: ['Lato', ...defaultTheme.fontFamily.sans],
+        "Lato": ['Lato', "sans-serif"],
         "Playfair": ['Playfair Display', "serif"]
       },
     },

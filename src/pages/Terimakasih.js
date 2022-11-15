@@ -19,6 +19,9 @@ function Terimakasih() {
           <div>
             <Link to="/"><button className="h-[42px] w-[120px] text-white rounded-full mt-[40px] lg:mt-[20px] bg-gradient-to-r from-[#8A2D2D] to-[#6E2424]">Evaluasi</button></Link>
           </div>
+
+
+          <p>test</p>
       </div>
     </>
   );

@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
 import LineBottom from '../../assets/decoration/line_bottom.png'
+import Button from '../Button/button';
 
 
 function Kritik2(){
@@ -25,9 +25,7 @@ function Kritik2(){
                         </textarea>
                     </div>
 
-                    <div className='flex justify-center mt-[3vh]'>
-                        <Link to="/"><button className="h-[48px] w-[168px] text-white font-bold font-Lato text-xl rounded-full mt-[40px] lg:mt-[20px] bg-gradient-to-r from-[#8A2D2D] to-[#6E2424]">Kirim Pesan</button></Link>
-                    </div>
+                    <Button text="Kirim Pesan" />
             </div>
             <img src={LineBottom} alt="line-bottom" className="w-full"/>
         </div>

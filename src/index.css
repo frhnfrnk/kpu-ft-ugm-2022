@@ -27,6 +27,11 @@ code {
   font-family: 'Lato', sans-serif;
 }
 
+.font-Playfair-semibold{
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
 
 body {
   overflow-y: scroll;

@@ -3,6 +3,8 @@ function Beranda() {
   return (
     <>
 
+
+    <Kritik />
     </>
   );
 }

@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import MenuItems from "../Header/MenuItem";
-import LineBottom from '../../assets/decoration/line_bottom.png'
 
 
 export default function Footer(){
@@ -11,7 +10,6 @@ export default function Footer(){
 
     return (
         <>
-            <img className="bg-[#E1DAD1]" src={LineBottom} />
             <footer className="w-full bg-[#35455D] h-auto lg:h-[275px] flex flex-col-reverse lg:flex-row p-[20px] lg:p-0 lg:px-[150px] lg:justify-between lg:items-center">
                 <div className="flex flex-col w-full lg:w-[40%]">
                     <h1 className="text-[20px] lg:text-[30px] font-Playfair text-[#fefefe] font-medium">Komisi Pemilihan Umum 2022<br/> Fakultas Teknik<br/> Universitas Gadjah Mada</h1>

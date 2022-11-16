@@ -60,12 +60,14 @@ export default function Header(){
 
     return (
         <>
-            <header className={`h-[calc(0.5rem+6vmin)] w-full bg-[#35455D] font-Lato lg:flex z-50 lg:justify-between lg:items-center lg:px-[150px] fixed transition-all ${isScroll ? "lg:bg-[35455D]" : "lg:bg-transparent"}`}>
+            <header className={`h-[calc(2rem+9vmin)] lg:h-[calc(0.5rem+7vmin)] w-full bg-[#35455D] font-Lato lg:flex z-50 lg:justify-between lg:items-center lg:px-[150px] fixed transition-[background] duration-300  ${isScroll ? "lg:bg-[#35455D]" : "lg:bg-transparent"}`}>
                 <div className='h-16 flex justify-between px-5 '>
-                    <div className='flex justify-center items-center'>
-                        <img src={Logo} className="h-9 pr-4"/>
-                        <h1 className={` text-[#e8e4e3] font-bold  text-md ${isScroll ? "lg:text-[#E1DAD1]" : "lg:text-[#2a374a]"}`}>KPUFT UGM 2022</h1>
-                    </div>
+                    <Link to="/" className='flex justify-center items-center'>
+                        <div className='flex justify-center items-center'>
+                            <img src={Logo} className="h-9 pr-4"/>
+                            <h1 className={` text-[#e8e4e3] font-bold  text-md ${isScroll ? "lg:text-[#E1DAD1]" : "lg:text-[#2a374a]"}`}>KPUFT UGM 2022</h1>
+                        </div>
+                    </Link>
                     <div 
                         onClick={()=>setIsOpen(!isOpen)}  
                         className='hamburger h-5 my-auto flex flex-col justify-around px-5 cursor-pointer transition-all duration-500 lg:hidden'>

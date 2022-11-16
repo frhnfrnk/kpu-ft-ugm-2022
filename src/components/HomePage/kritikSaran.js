@@ -6,7 +6,7 @@ function Kritik(){
                 className="w-full h-[100vh] bg-no-repeat bg-cover bg-center"
                 style={{backgroundImage: `url(/imgKritik/bgkritik.png)`}}
                 >
-                    <h1 className="text-slate-700 font-serif md:text-4xl text-2xl text-center pt-[33vh]">
+                    <h1 className="text-[#2A374A] font-Playfair-semibold md:text-4xl text-2xl text-center pt-[33vh]">
                         Kritik dan Masukan
                     </h1>
 

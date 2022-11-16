@@ -1,6 +1,7 @@
 import bg from "../assets/TentangKPU/Backbaru.png";
 import logoCircle from "../assets/Logo/logo_circ.png";
 import { Link } from "react-router-dom";
+import Kritik from "../components/Terimakasih/Kritik";
 
 function Terimakasih() {
   return (
@@ -21,7 +22,9 @@ function Terimakasih() {
           </div>
 
 
-          <p>test</p>
+      </div>
+      <div className="bg-[#E1DAD1]">
+        <Kritik />
       </div>
     </>
   );

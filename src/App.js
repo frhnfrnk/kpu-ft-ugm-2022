@@ -16,7 +16,7 @@ function App() {
           <Header />
           <Routes>
             <Route exact path="/" element={<Beranda />} />
-            <Route exact path="/error" element={<Error />} />
+            <Route exact path="*" element={<Error />} />
             <Route exact path="/info-calon" element={<InfoCalon />} />
             <Route exact path="/terimakasih" element={<Terimakasih />} />
             <Route exact path="/tentang" element={<Tentang />} />

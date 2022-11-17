@@ -47,9 +47,9 @@ export default function Tentang() {
             <b>Komisi Pemilihan Umum</b> Fakultas Teknik Universitas Gadjah Mada yang selanjutnya disebut KPU adalah suatu komisi yang menyelenggarakan Pemilu berdasarkan Undang-Undang KMFT UGM tentang Pemilu dan terdiri dari SC KPU, OC
             KPU, Panitia Pengawas Pemilu dan Mahkamah Pemilu.
           </p>
-          <div className="pb-[30vh] lg:pb-[50vh] pt-[1vh] bg-cover  mt-0 bg-no-repeat" style={{ backgroundImage: "url(" + Backbaru2 + ")" }}>
-            <h1 className="text-center lg:mt-[217px] text-[18px] lg:text-[30px] font-bold font-Playfair text-[#2A374A] leading-[28.8px] mt-[120px] lg:ml-[539px] lg:mr-[540px]">Panitia KPU FT UGM 2022</h1>
-            <div class="Panitia">
+          <div className="pb-[2vh] lg:pb-[10vh] pt-[0.5vh] bg-cover bg-no-repeat" style={{ backgroundImage: "url(" + Backbaru2 + ")" }}>
+            <h1 className="text-center lg:mt-[217px] text-[18px] lg:text-[30px] font-bold font-Playfair text-[#2A374A] leading-[28.8px] mt-[70px] lg:ml-[539px] lg:mr-[540px]">Panitia KPU FT UGM 2022</h1>
+            <div className="lg:mt-[50px] mt-[20px] lg:mr-[226px] lg:ml-[226px] ml-[40px] mr-[40px]">
               <CarouselPanitia />
             </div>
           </div>

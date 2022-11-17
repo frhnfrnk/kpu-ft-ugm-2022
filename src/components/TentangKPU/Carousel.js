@@ -1,28 +1,28 @@
 import React from "react";
 import { Carousel } from "antd";
-import { KETUA, IT, MEDPUB, ACARA, HUMAS, KSK } from "../../assets/images/imgKPU";
+import { ACARA, HUMAS, IT, KETUA, KSK, MEDPUB } from "../../assets/images/imgKPU";
 
 export default function CarouselPanitia() {
   return (
     <container>
-      <Carousel autoplaySpeed={20} class=" flex justify center">
+      <Carousel autoplaySpeed={20}>
         <div className="container-panitia">
-          <img alt="" className="w-[700px] h-[700px]" src={KETUA} />
+          <img alt="ketua" src={KETUA} />
         </div>
         <div className="container-panitia">
-          <img alt="" className="w-[700px] h-[700px]" src={KSK} />
+          <img alt="ksk" src={KSK} />
         </div>
         <div className="container-panitia">
-          <img alt="" className="w-[700px] h-[700px] flex-auto justify-center" src={ACARA} />
+          <img alt="acara" className=" flex-auto justify-center" src={ACARA} />
         </div>
         <div className="container-panitia">
-          <img alt="" className="w-[700px] h-[700px]" src={IT} />
+          <img alt="it" src={IT} />
         </div>
         <div className="container-panitia">
-          <img alt="" className="w-[700px] h-[700px]" src={MEDPUB} />
+          <img alt="medpub" src={MEDPUB} />
         </div>
         <div className="container-panitia">
-          <img alt="" className="w-[700px] h-[700px]" src={HUMAS} />
+          <img alt="humas" src={HUMAS} />
         </div>
       </Carousel>
     </container>

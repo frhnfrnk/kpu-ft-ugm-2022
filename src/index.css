@@ -12,6 +12,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #E1DAD1;
 }
 
 code {
@@ -27,11 +28,21 @@ code {
   font-family: 'Lato', sans-serif;
 }
 
+.font-Lato-bold{
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+
+}
+
 .font-Playfair-semibold{
   font-family: 'Playfair Display', serif;
   font-weight: 600;
 }
 
+.font-Playfair-bold{
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
 
 body {
   overflow-y: scroll;

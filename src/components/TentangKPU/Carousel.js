@@ -10,19 +10,19 @@ export default function CarouselPanitia() {
           <img alt="ketua" src={KETUA} />
         </div>
         <div className="container-panitia">
-          <img alt="ksk" src={KSK} />
+          <img alt="ksk" className="mx-auto" src={KSK} />
         </div>
         <div className="container-panitia">
-          <img alt="acara" className=" flex-auto justify-center" src={ACARA} />
+          <img alt="acara" className=" mx-auto" src={ACARA} />
         </div>
         <div className="container-panitia">
-          <img alt="it" src={IT} />
+          <img alt="it" className="mx-auto" src={IT} />
         </div>
         <div className="container-panitia">
-          <img alt="medpub" src={MEDPUB} />
+          <img alt="medpub" className="mx-auto" src={MEDPUB} />
         </div>
         <div className="container-panitia">
-          <img alt="humas" src={HUMAS} />
+          <img alt="humas" className="mx-auto" src={HUMAS} />
         </div>
       </Carousel>
     </container>

@@ -10,8 +10,8 @@ export default function Hero() {
             <div className="grid lg:grid-cols-12 lg:pl-[170px]">
               <div className="flex flex-col lg:col-span-5 lg:col-start-1 lg:pt-40 pt-28 gap-2 lg:text-left text-center lg:mx-0 mx-auto">
                 <div className="text-[#2A374A] font-['Playfair'] font-bold text-6xl lg:text-7xl">
-                  <h1>KPUFT</h1>
-                  <h1>UGM <span className="text-5xl lg:text-6xl">2022</span></h1>
+                  <h1 className="drop-shadow-[-8px_2px_10px_rgba(22,22,22,0.5)]">KPUFT</h1>
+                  <h1 className="drop-shadow-[-8px_2px_10px_rgba(22,22,22,0.5)]">UGM <span className="text-5xl lg:text-6xl">2022</span></h1>
                 </div>
                 <div className="className=text-[#2A374A] font-['Lato'] font-medium text-2xl">
                   <p>Pemilihan Umum</p>

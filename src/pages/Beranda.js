@@ -1,9 +1,11 @@
-import Hero from "../components/Beranda/Hero";
-
+import Countdown from "../components/Beranda/Countdown";
+import Kritik from "../components/HomePage/kritikSaran";
 function Beranda() {
   return (
     <>
-      <Hero/>
+
+    <Countdown />
+    <Kritik />
     </>
   );
 }

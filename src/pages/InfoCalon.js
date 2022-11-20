@@ -1,10 +1,9 @@
+import Calon from "../components/Calon Ketua/Calon";
 
 function InfoCalon() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-      Hello InfoCalon!
-    </h1>
+      <Calon/>
     </>
   );
 }

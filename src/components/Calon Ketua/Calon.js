@@ -18,7 +18,7 @@ export default function Calon() {
             <div className="grid lg:grid-cols-12 lg:px-[170px] lg:mt-6 justify-center">
               <div className="flex flex-col lg:col-span-4 lg:col-start-2 bg-cover bg-no-repeat rounded-b-full" style={{ backgroundImage: "url(" + Back_Paper + ")" }}> 
                 <img src={Pict_calon} alt="pict_calon" className="w-full rounded-b-full"/> 
-                <h1 className="lg:col-span-4 lg:col-start-2 mx-auto ">Rafly Zaki Ramadhan</h1>
+                <h1 className="lg:col-span-4 lg:col-start-2 mx-auto">Rafly Zaki Ramadhan</h1>
               </div> 
               <div className="lg:col-span-4 lg:col-start-8 bg-cover bg-no-repeat rounded-b-full" style={{ backgroundImage: "url(" + Back_Paper + ")" }}> 
                 <img src={Pict_calon} alt="pict_calon" className="w-full rounded-b-full"/> 

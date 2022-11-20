@@ -1,30 +1,35 @@
 import React from "react";
-import { Carousel } from "antd";
 import { ACARA, HUMAS, IT, KETUA, KSK, MEDPUB } from "../../assets/images/imgKPU";
+import "@splidejs/react-splide/css";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 
-export default function CarouselPanitia() {
+export default function SplidePanitia() {
   return (
-    <container>
-      <Carousel autoplaySpeed={20}>
-        <div className="container-panitia">
-          <img alt="ketua" src={KETUA} />
-        </div>
-        <div className="container-panitia">
-          <img alt="ksk" className="mx-auto" src={KSK} />
-        </div>
-        <div className="container-panitia">
-          <img alt="acara" className=" mx-auto" src={ACARA} />
-        </div>
-        <div className="container-panitia">
-          <img alt="it" className="mx-auto" src={IT} />
-        </div>
-        <div className="container-panitia">
-          <img alt="medpub" className="mx-auto" src={MEDPUB} />
-        </div>
-        <div className="container-panitia">
-          <img alt="humas" className="mx-auto" src={HUMAS} />
-        </div>
-      </Carousel>
-    </container>
+    <Splide
+      aria-label="Panitia_KPU"
+      options={{
+        rewind: false,
+        isNavigation: true,
+      }}
+    >
+      <SplideSlide>
+        <img src={KETUA} className="mx-auto mt-[20px]" alt="ketua" />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={ACARA} className="mx-auto mt-[20px]" alt="acara" />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={IT} className="mx-auto mt-[20px]" alt="it" />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={MEDPUB} className="mx-auto mt-[20px]" alt="medpub" />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={KSK} className="mx-auto mt-[20px]" alt="ksk" />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={HUMAS} className="mx-auto mt-[20px]" alt="humas" />
+      </SplideSlide>
+    </Splide>
   );
 }

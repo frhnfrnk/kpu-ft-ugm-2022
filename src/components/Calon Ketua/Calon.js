@@ -2,8 +2,8 @@ import Backbaru from "../../assets/TentangKPU/Backbaru.png";
 import Hiasan_choose from "../../assets/Calon/Hiasan_choose.png";
 import Group_71 from "../../assets/Calon/Group 71.png";
 import Group_73 from "../../assets/Calon/Group 71.png";
-import Pict_calon from "../../assets/Calon/Pict _calon.png";
-import Back_Paper from "../../assets/Calon/Back_Paper.png";
+import Frame_Calon from "../../assets/Calon/Frame_Calon.png";
+import Frame_Calon2 from "../../assets/Calon/Frame_Calon2.png";
 
 export default function Calon() {
   return (
@@ -15,14 +15,14 @@ export default function Calon() {
               <h1 className="font-['Playfair'] text-4xl font-bold">Calon Ketua</h1>
               <p className="font-['Lato'] text-2xl">BEM KMFT UGM 2023</p>
             </div>
-            <div className="grid lg:grid-cols-12 lg:px-[170px] lg:mt-6 justify-center">
-              <div className="flex flex-col lg:col-span-4 lg:col-start-2 bg-cover bg-no-repeat rounded-b-full" style={{ backgroundImage: "url(" + Back_Paper + ")" }}> 
-                <img src={Pict_calon} alt="pict_calon" className="w-full rounded-b-full"/> 
-                <h1 className="lg:col-span-4 lg:col-start-2 mx-auto">Rafly Zaki Ramadhan</h1>
+            <div className="grid lg:grid-cols-12 lg:px-[170px] justify-center">
+              <div className="flex flex-col lg:col-span-4 lg:col-start-2"> 
+                <img src={Frame_Calon2} alt="calon_2"/>
+                <h1 className="">Hilmi Naufal Zulfani</h1>
               </div> 
-              <div className="lg:col-span-4 lg:col-start-8 bg-cover bg-no-repeat rounded-b-full" style={{ backgroundImage: "url(" + Back_Paper + ")" }}> 
-                <img src={Pict_calon} alt="pict_calon" className="w-full rounded-b-full"/> 
-                <h1 className="lg:col-span-4 lg:col-start-8 mx-auto">Rafly Zaki Ramadhan</h1>
+              <div className="lg:col-span-4 lg:col-start-8"> 
+                <img src={Frame_Calon} alt="calon_1"/>
+                <h1 className="lg:col-span-4 lg:col-start-8">Ariel Excelsio T.S</h1>
               </div>            
             </div>
             <div className="mt-16 mx-auto">
@@ -30,7 +30,7 @@ export default function Calon() {
             </div>  
           </div>  
           <div className="h-screen">
-            <img src={Hiasan_choose} alt="hiasan" className="mx-auto"/>
+            <img src={Hiasan_choose} alt="hiasan" className=""/>
           </div>          
         </div>     
       {/*Calon Section End*/}  

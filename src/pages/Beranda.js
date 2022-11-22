@@ -9,9 +9,11 @@ function Beranda() {
     <>
     <Hero/>
     <Countdown />
+    <Calonnew />
+    <Tentang />
+    <Tutor />
     <Kritik />
 
-    <Kritik/>
     </>
   );
 }

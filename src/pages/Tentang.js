@@ -1,11 +1,16 @@
 import Backbaru from "../assets/TentangKPU/Backbaru.png";
 import Backbaru2 from "../assets/TentangKPU/Backbaru2.png";
 import SplidePanitia from "../components/TentangKPU/Carousel.js";
+import {Helmet} from "react-helmet";
+
 // import "antd/dist/antd.css";
 
 export default function Tentang() {
   return (
     <>
+      <Helmet>
+        <title>Tentang | KPU FT UGM 2022</title>
+      </Helmet>
       {/* bagian tentang kami */}
       <div className="bg-cover bg-[#E1DAD1]">
         <div className="bg-cover w-full bg-no-repeat w-full lg:h-[120vh] h-[85vh] " style={{ backgroundImage: "url(" + Backbaru + ")" }}>

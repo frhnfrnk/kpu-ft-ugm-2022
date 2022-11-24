@@ -4,14 +4,20 @@ import "@splidejs/react-splide/css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 export default function SplidePanitia() {
+
+ 
+
   return (
     <Splide
       aria-label="Panitia_KPU"
       options={{
-        rewind: false,
+        type: "loop",
+        rewind: true,
         isNavigation: true,
       }}
     >
+
+
       <SplideSlide>
         <img src={KETUA} className="mx-auto mt-[20px]" alt="ketua" />
       </SplideSlide>

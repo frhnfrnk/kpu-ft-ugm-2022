@@ -8,9 +8,9 @@ export default function Tentang() {
     <>
       {/* bagian tentang kami */}
       <div className="bg-cover bg-[#E1DAD1]">
-        <div className="bg-cover bg-no-repeat w-full lg:h-[120vh] h-[85vh] " style={{ backgroundImage: "url(" + Backbaru + ")" }}>
+        <div className="bg-cover w-full bg-no-repeat w-full lg:h-[120vh] h-[85vh] " style={{ backgroundImage: "url(" + Backbaru + ")" }}>
           <h1
-            className="pt-[20vh] text-center text-[28px] lg:text-[50px] font-Playfair text-[#2A374A] font-bold lg:pt-[150px] lg:ml-[558px] lg:mr-[559px] lg:mb-[28px] leading-[
+            className="w-full pt-[20vh] text-center text-[28px] lg:text-[50px] font-Playfair text-[#2A374A] font-bold lg:pt-[150px] lg:mb-[28px] leading-[
 37.32px] mb-[20px]"
           >
             Tentang Kami
@@ -49,7 +49,7 @@ export default function Tentang() {
           </p>
           <div className="pb-[2vh] lg:pb-[10vh] pt-[0.5vh] bg-cover bg-no-repeat" style={{ backgroundImage: "url(" + Backbaru2 + ")" }}>
             <h1 className="text-center lg:mt-[217px] text-[18px] lg:text-[30px] font-bold font-Playfair text-[#2A374A] leading-[28.8px] mt-[70px] lg:ml-[539px] lg:mr-[540px]">Panitia KPU FT UGM 2022</h1>
-            <div class="Panitia">
+            <div class="Panitia" className="border-none">
               <SplidePanitia />
             </div>
           </div>

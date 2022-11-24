@@ -23,5 +23,7 @@ module.exports = {
       textColor: ['active'],
     }
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+  ],
 }

@@ -10,6 +10,11 @@ const MenuItems = [
       id: 'infocalon'
     },
     {
+      label: 'Cek Status',
+      url: "/cek-status",
+      id: 'cekstatus'
+    },
+    {
       label: 'Tentang KPU',
       url: "/tentang",
       id: 'tentang'

@@ -9,15 +9,15 @@ function Calonnew(){
                     <h2 className="absolute text-white bg-slate-600 opacity-0 group-hover:opacity-80 duration-500 group-hover:duration-700 group-hover:delay-15 rounded-md md:text-lg md:top-[23vh] md:left-[-5vh] top-[15vh] left-[2vh] z-50 text-xs p-1">
                         #Teknik1Tujuan
                     </h2>
-                    <h2 className="absolute text-white bg-slate-600 opacity-0 group-hover:opacity-80 duration-500 group-hover:duration-700 group-hover:delay-15 rounded-md md:text-lg md:top-[26.8vh] md:left-[-5vh] top-[18.3vh] left-[2vh] z-50 text-xs p-1">
+                    <h2 className="absolute text-white bg-slate-600 opacity-0 group-hover:opacity-80 duration-500 group-hover:duration-700 group-hover:delay-15 rounded-md md:text-lg md:top-[27.5vh] md:left-[-5vh] top-[18.3vh] left-[2vh] z-50 text-xs p-1">
                         #BersamaSatukan1Teknik
                     </h2>
                     <h2 className="absolute text-white bg-slate-600 opacity-0 group-hover:opacity-80 duration-500 group-hover:duration-700 group-hover:delay-15 rounded-md md:text-xl md:top-[38vh] md:right-[-3vh] top-[23vh] right-[3vh] z-50 text-sm md:p-4 p-2">
                         Pilih Nomor 1
                     </h2>
-                    <div className="flex justify-center">
+                    <div className="flex justify-center   ">
                         <img src="/imgKritik/calonkiri.png" 
-                        className="w-[75%] md:w-[57vh] opacity-80 group-hover:opacity-100 duration-500 group-hover:duration-700 group-hover:delay-150"/>
+                        className="w-[75%] md:w-[57vh] grayscale sepia-[0.5] opacity-100 group-hover:opacity-100 duration-500 group-hover:grayscale-0 group-hover:sepia-0 group-hover:duration-700 group-hover:delay-50"/>
                     </div>
                 </div>
                 <div className="relative flex justify-center group">
@@ -30,7 +30,7 @@ function Calonnew(){
                     </h2>
                     <div className="flex justify-center">
                         <img src="/imgKritik/calonkanan.png"
-                        className="w-[75%] md:w-[57vh] opacity-80 group-hover:opacity-100 duration-500 group-hover:duration-700 group-hover:delay-150"/>
+                        className="w-[75%] md:w-[57vh] grayscale sepia-[0.5] opacity-100 group-hover:opacity-100 duration-500 group-hover:grayscale-0 group-hover:sepia-0 group-hover:duration-700 group-hover:delay-50"/>
                     </div>
                 </div>
             </div>

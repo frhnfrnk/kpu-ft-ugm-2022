@@ -60,8 +60,8 @@ export default function Calon() {
             </div>
           </div>
         </div>  
-        ) : null }}  
-      {/*Calon Section End*/}  
+        ) : null } 
+      {/*Calon Section End*/}}  
     </>
   );
 }

@@ -2,9 +2,9 @@ import React, { useEffect, useState }  from "react"
 import Clock from "./Clock";
 
 
-function Countdown() {
+function VoteTime() {
 
-  const endTime = new Date('November 28, 2022 00:00:00').getTime();
+  const endTime = new Date('November 30, 2022 17:00:00').getTime();
   const [currentTime,setcurrentTime] = useState(new Date().getTime());
   const gap = endTime - currentTime; //177670892
   
@@ -29,7 +29,7 @@ function Countdown() {
     <div>
       <center>
 
-        <Clock days={remainingDays} 
+        <Clock2 days={remainingDays} 
         hours={remainingHours} minutes={remainingMinutes}
         seconds={remainingSeconds} />
 

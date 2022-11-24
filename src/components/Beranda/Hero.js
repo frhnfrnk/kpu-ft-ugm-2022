@@ -7,14 +7,16 @@ import { StateContext } from "../Context/context";
 export default function Hero() {
 
   const {isCompleted} = useContext(StateContext)
+  
+  
 
   return (
     <>
       {/*Hero Section Start*/}
         <div className="bg-[#E1DAD1] h-[100vh] w-[100%]">
-          <div className="bg-cover bg-center w-full h-full bg-no-repeat flex justify-center" style={{ backgroundImage: "url(" + Back_kertas + ")" }}>
-            <div className="w-[90%] h-[100%] flex flex-col md:flex-row justify-center items-center mt-[5vh] lg:mt-[-5vh]">
-              <div className="w-full h-[40%] md:w-[50%] flex flex-col lg:text-left justify-center lg:pl-[100px] mx-auto">
+          <div className="w-full bg-cover bg-center w-full h-full bg-no-repeat flex justify-center" style={{ backgroundImage: "url(" + Back_kertas + ")" }}>
+            <div className="w-[100%] h-[100%] flex flex-col md:flex-row justify-center items-center mt-[5vh] lg:mt-[-5vh]">
+              <div className="w-full h-[40%] md:w-[50%] flex flex-col lg:text-left justify-center items-center mx-auto lg:pl-[9vw]">
                 <div className="mx-auto w-[90%] text-[#2A374A] font-Playfair-bold text-[54px] lg:text-[95px]">
                   <h1 className="drop-shadow-[-8px_2px_10px_rgba(22,22,22,0.6)] lg:drop-shadow-[-8px_2px_10px_rgba(22,22,22,0.25)] mb-[-25px] lg:mb-[-50px]">KPUFT</h1>
                   <h1 className="drop-shadow-[-8px_2px_10px_rgba(22,22,22,0.7)] lg:drop-shadow-[-8px_2px_10px_rgba(22,22,22,0.25)]">UGM <span className="text-5xl lg:text-[85px]">2022</span></h1>
@@ -26,7 +28,13 @@ export default function Hero() {
                 <p className="mx-auto w-[90%] text-[#6E2424] font-['Lato'] text-[12px] font-bold text-base">29 November - 1 Desember 2022</p>    
                 <div className="mx-auto w-[90%] mt-4 space-x-4">
                   
-                  {isCompleted ? <button href="#" className="bg-gradient-to-r from-[#8A2D2D] to-[#6E2424] text-[#FFFFFF] rounded-full px-4 py-2 font-semibold shadow-[0px_4px_10px_rgba(55,18,18,0.25)] hover:bg-gradient-to-r hover:from-[#E1DAD1] hover:to-[#E1DAD1] hover:text-[#8A2D2D] hover:shadow-[0px_7px_20px_rgba(110,36,36,0.15),0px_10px_25px_1px_rgba(55,18,18,0.45)] active:bg-gradient-to-r active:from-[#BFB196] active:to-[#BFB196] active:shadow-[0px_7px_20px_rgba(110,36,36,0.15),0px_10px_25px_1px_rgba(55,18,18,0.45)] active:border-none transition-all">Vote Sekarang!</button> : <button href="#" className="bg-gradient-to-r from-[#959595] to-[#959595] text-[#FFFFFF] rounded-full px-6 py-2 font-semibold shadow-[0px_4px_10px_rgba(55,18,18,0.25)] cursor-default">Vote Ditutup</button>}
+                  {isCompleted ? 
+                  <button href="#" className="bg-gradient-to-r from-[#8A2D2D] to-[#6E2424] text-[#FFFFFF] rounded-full px-4 py-2 font-semibold shadow-[0px_4px_10px_rgba(55,18,18,0.25)] hover:bg-gradient-to-r hover:from-[#E1DAD1] hover:to-[#E1DAD1] hover:text-[#8A2D2D] hover:shadow-[0px_7px_20px_rgba(110,36,36,0.15),0px_10px_25px_1px_rgba(55,18,18,0.45)] active:bg-gradient-to-r active:from-[#BFB196] active:to-[#BFB196] active:shadow-[0px_7px_20px_rgba(110,36,36,0.15),0px_10px_25px_1px_rgba(55,18,18,0.45)] active:border-none transition-all">Vote Sekarang!</button> 
+                  : 
+                  <button href="#" className="bg-gradient-to-r from-[#959595] to-[#959595] text-[#FFFFFF] rounded-full px-6 py-2 font-semibold shadow-[0px_4px_10px_rgba(55,18,18,0.25)] cursor-default">Vote Ditutup</button>
+                  }
+                  
+
                   <Link to="/info-calon"><button  className="border-[#A05252] hover:border-[#9D7E57] active:border-[#7E6546] border-2 rounded-full px-7 py-1.5 text-[#A05252] font-semibold ">Lihat Calon</button></Link>
                 </div>         
               </div>

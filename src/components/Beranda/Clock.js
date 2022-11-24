@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import { useContext } from 'react';
+import { StateContext } from '../Context/context';
 
 const Clock = ({days,hours,minutes,seconds}) => {
+    const {isCompleted, setIsCompleted} = useContext(StateContext)
     
     const clockStyle = "bg-[#2A374A] p-[10px] rounded-[10px] flex justify-center items-center flex-col text-[#E8E4E3] font-bold"
     const textCompleted = document.getElementsByClassName("textCompleted");
@@ -9,6 +12,7 @@ const Clock = ({days,hours,minutes,seconds}) => {
     useEffect(()=>{
         if(days === 0 && hours === 0 && minutes === 0 && seconds === 0){
             textCompleted[0].style.display = "block";
+            setIsCompleted(true);
         }
         else{
             textCompleted[0].style.display = "none";

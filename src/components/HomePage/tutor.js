@@ -1,6 +1,6 @@
 function Tutor(){
     return(
-        <div className="w-full md:h-[85vh] h-[40vh] bg-no-repeat bg-cover bg-center"
+        <div className="w-full md:h-[55vh] lg:h-[85vh] h-[40vh] bg-no-repeat bg-cover bg-center"
         style={{backgroundImage: `url(/imgKritik/bgtentang.png)`}}
         >
 

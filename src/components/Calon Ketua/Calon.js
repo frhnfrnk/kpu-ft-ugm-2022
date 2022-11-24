@@ -113,6 +113,7 @@ export default function Calon() {
           </div>
         </div>  
         ) : null } 
+      {/*Calon Section End*/}
 
         { isOpen2 ? (
              <div className="popup calon1 w-[90vw] md:w-[80vw] h-[auto] py-[20px] absolute top-[15vh] left-[50%] -ml-[45vw] md:-ml-[40vw] bg-[#D8CBBC] bg-center bg-no-repeat bg-cover flex justify-center items-center rounded-[14px] lg:rounded-[40px] brightness-110 shadow-[0px_-6px_15px_2px_rgba(63,50,35,0.1),0px_8px_25px_1px_rgba(63,50,35,0.16),0px_35px_40px_2px_rgba(63,50,35,0.32)]" style={{ backgroundImage: "url(" + overlay + ")" }}>

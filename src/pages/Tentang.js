@@ -1,6 +1,7 @@
 import Backbaru from "../assets/TentangKPU/Backbaru.png";
 import Backbaru2 from "../assets/TentangKPU/Backbaru2.png";
 import SplidePanitia from "../components/TentangKPU/Carousel.js";
+import lineFooter from "../assets/decoration/line_bottom.png";
 import {Helmet} from "react-helmet";
 
 // import "antd/dist/antd.css";
@@ -59,6 +60,7 @@ export default function Tentang() {
             </div>
           </div>
         </div>
+        <img src={lineFooter} alt="line" className="bg-[#DECDB2] w-full h-auto"/>
       </div>
       {/* Akhir bagian tentang kami */}
     </>

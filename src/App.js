@@ -4,6 +4,7 @@ import Error from './pages/Error';
 import InfoCalon from './pages/InfoCalon';
 import Terimakasih from './pages/Terimakasih';
 import Tentang from './pages/Tentang';
+import CekStatus from './pages/CekStatus';
 import Header from './components/Header/header';
 import Footer from "./components/Footer/footer";
 
@@ -25,6 +26,7 @@ function App() {
               <Route exact path="/terimakasih" element={<Terimakasih />} />
               <Route exact path="/tentang" element={<Tentang />} />
               <Route exact path="/vote" element={<Vote />} />
+              <Route exact path="/cek-status" element={<CekStatus />} />
             </Routes>
             <GoToTop />
             <Footer />

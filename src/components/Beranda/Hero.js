@@ -15,9 +15,9 @@ export default function Hero() {
       {/*Hero Section Start*/}
         <div className="bg-[#E1DAD1] h-[100vh] w-[100%]">
           <div className="w-full bg-cover bg-center w-full h-full bg-no-repeat flex justify-center" style={{ backgroundImage: "url(" + Back_kertas + ")" }}>
-            <div className="w-[100%] h-[100%] flex flex-col md:flex-row justify-center items-center mt-[5vh] lg:mt-[-5vh]">
-              <div className="w-full h-[40%] md:w-[50%] flex flex-col lg:text-left justify-center items-center mx-auto lg:pl-[9vw]">
-                <div className="mx-auto w-[90%] text-[#2A374A] font-Playfair-bold text-[54px] lg:text-[95px]">
+            <div className="w-[100%] h-[100%] flex flex-col lg:flex-row justify-center items-center mt-[5vh] lg:mt-[-5vh]">
+              <div className="w-full h-[40%] lg:w-[50%] flex flex-col lg:text-left justify-center items-center mx-auto pl-[9vw] md:pl-[25%] lg:pl-[9vw]">
+                <div className="mx-auto w-[90%] text-[#2A374A] font-Playfair-bold text-[54px] md:text-[95px]">
                   <h1 className="drop-shadow-[-8px_2px_10px_rgba(22,22,22,0.6)] lg:drop-shadow-[-8px_2px_10px_rgba(22,22,22,0.25)] mb-[-25px] lg:mb-[-50px]">KPUFT</h1>
                   <h1 className="drop-shadow-[-8px_2px_10px_rgba(22,22,22,0.7)] lg:drop-shadow-[-8px_2px_10px_rgba(22,22,22,0.25)]">UGM <span className="text-5xl lg:text-[85px]">2022</span></h1>
                 </div>

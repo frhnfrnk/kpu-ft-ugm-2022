@@ -1,5 +1,6 @@
 import BackCekStatus from "../assets/CekStatus/BackCekStatus.png";
 import Hiasan_choose from "../assets/Calon/Hiasan_choose.png";
+import { Link } from 'react-router-dom';
 
 function CekStatus() {
   return (
@@ -13,7 +14,7 @@ function CekStatus() {
               <label>
                 <input className="placeholder:text-[#9D7E57] pr-12 pl-3 rounded-3xl bg-[#E8E4E3] border-2 border-solid border-[#9D7E57] py-1.5 hover:placeholder:text-[#8A2D2D] hover:border-[#8A2D2D] focus:placeholder:text-[#35455D] focus:border-[#35455D] drop-shadow-[0px_4px_5px_rgba(110,36,36,0.1)] hover:drop-shadow-[0px_7px_20px_rgba(110,36,36,0.15)] focus:hover:drop-shadow-[0px_7px_20px_rgba(110,36,36,0.15)]" placeholder="Ketik NIM Anda..." type="text" name="NIM"/>
               </label>
-              <button href="#" className="bg-gradient-to-r from-[#8A2D2D] to-[#6E2424] hover:bg-[#E1DAD1] active:bg-[#BFB196] rounded-3xl py-[6px] text-[#FFFFFF] hover:text-[#8A2D2D] active:text-[#8A2D2D] px-7 drop-shadow-[0px_4px_5px_rgba(110,36,36,0.1)] hover:drop-shadow-[0px_7px_20px_rgba(110,36,36,0.15)] active:drop-shadow-[0px_7px_20px_rgba(110,36,36,0.15)]">Periksa</button>
+              <Link to="/"><button className={`h-[auto] w-[auto] py-[8px] px-[30px] text-white font-bold font-Lato font-base rounded-3xl bg-gradient-to-r from-[#8A2D2D] to-[#6E2424] shadow-[0px_4px_5px_rgba(110,36,36,0.1),0px_4px_10px_rgba(55,18,18,0.25)] hover:bg-gradient-to-r hover:from-[#E1DAD1] hover:to-[#E1DAD1] hover:text-[#8A2D2D] hover:shadow-[0px_7px_20px_rgba(110,36,36,0.15),0px_10px_25px_1px_rgba(55,18,18,0.45)] transition-all active:bg-gradient-to-r active:from-[#BFB196] active:to-[#BFB196] active:shadow-[0px_7px_20px_rgba(110,36,36,0.15),0px_10px_25px_1px_rgba(55,18,18,0.45)] active:border-none`}>Periksa</button></Link>
             </div>
           </div>
         </div>     

@@ -76,7 +76,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .bgLetter{
-  background-image: url("../public/imgKritik/bgkritik.png");
+  background-image: url("../public/imgKritik/bgcalon.png");
 }
 
 @media screen and (max-width: 768px) {

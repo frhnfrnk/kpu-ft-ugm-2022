@@ -13,9 +13,9 @@ function Kritik2(){
                         Kritik dan Masukan
                     </h1>
 
-                    <div className="md:h-[43vh] h-[33vh]  lg:w-auto border-0 rounded-xl pt-[3vh] mt-[25px] flex justify-center">
+                    <div className="md:h-[43vh] h-[33vh] lg:w-auto border-0 rounded-xl pt-[3vh] mt-[25px] mb-[30px] flex justify-center ">
                         <textarea
-                            className="md:h-[40vh] h-[30vh] w-[75vw] lg:w-auto bg-c-05 bg-opacity-50 border-8 border-[#2A374A] rounded-2xl p-6"
+                            className="resize-none font-Lato text-[#2A374A] md:h-[40vh] h-[30vh] w-[75vw] lg:w-auto bg-c-05 bg-opacity-50 border-8 border-[#2A374A] rounded-2xl p-6 shadow-[0px_10px_15px_rgba(21,28,37,0.3)]"
                             rows="3"
                             cols="110"
                             id="text-translate"
@@ -25,7 +25,7 @@ function Kritik2(){
                         </textarea>
                     </div>
 
-                    <Button text="Kirim Pesan" />
+                    <Button text="Kirim Pesan" sizeText="20px"/>
             </div>
             <img src={LineBottom} alt="line-bottom" className="w-full"/>
         </div>

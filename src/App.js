@@ -8,20 +8,23 @@ import Header from './components/Header/header';
 import Footer from "./components/Footer/footer";
 
 import './index.css';
+import { StateProvider } from "./components/Context/context";
 
 function App() {
   return (
       <>
         <Router>
-          <Header />
-          <Routes>
-            <Route exact path="/" element={<Beranda />} />
-            <Route exact path="*" element={<Error />} />
-            <Route exact path="/info-calon" element={<InfoCalon />} />
-            <Route exact path="/terimakasih" element={<Terimakasih />} />
-            <Route exact path="/tentang" element={<Tentang />} />
-          </Routes>
-          <Footer />
+          <StateProvider>
+            <Header />
+            <Routes>
+              <Route exact path="/" element={<Beranda />} />
+              <Route exact path="*" element={<Error />} />
+              <Route exact path="/info-calon" element={<InfoCalon />} />
+              <Route exact path="/terimakasih" element={<Terimakasih />} />
+              <Route exact path="/tentang" element={<Tentang />} />
+            </Routes>
+            <Footer />
+          </StateProvider>
         </Router>
       </>
   );

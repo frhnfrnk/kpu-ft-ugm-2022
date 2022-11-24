@@ -2,6 +2,7 @@ import bg from "../assets/TentangKPU/Backbaru.png";
 import logoCircle from "../assets/Logo/logo_circ.png";
 import { Link } from "react-router-dom";
 import Kritik from "../components/Terimakasih/Kritik";
+import Button from "../components/Button/button";
 
 function Terimakasih() {
   return (
@@ -17,10 +18,10 @@ function Terimakasih() {
           <div>
             <h1 className="font-Lato text-[#2A374A] text-center font-bold lg:font-medium text-[calc(0.5rem+5vmin)] lg:text-[calc(1rem+3vmin)]">PEMILU FT UGM 2022</h1>
           </div>
-          <div>
+          {/* <div>
             <Link to="/"><button className="h-[42px] w-[120px] text-white rounded-full mt-[40px] lg:mt-[20px] bg-gradient-to-r from-[#8A2D2D] to-[#6E2424]">Evaluasi</button></Link>
-          </div>
-
+          </div> */}
+          <Button text="Evaluasi" sizeText="16px"/>
 
       </div>
       <div className="bg-[#E1DAD1]">

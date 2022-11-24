@@ -53,3 +53,24 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5vmin;
   background-color: #bfb196;
 }
+
+
+.splide__slide.is-active{
+  border: none !important;
+}
+
+.splide__pagination__page.is-active{
+  background-color: #8A2D2D !important;
+}
+
+.splide__pagination__page{
+  background-color: #959595 !important;
+}
+
+.splide__arrow{
+  background-color: transparent !important;
+}
+
+.splide__arrow svg{
+  fill: #8A2D2D !important;
+}

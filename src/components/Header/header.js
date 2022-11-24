@@ -60,7 +60,7 @@ export default function Header(){
 
     return (
         <>
-            <header className={`h-[calc(2rem+9vmin)] lg:h-[calc(0.5rem+7vmin)] w-full bg-[#35455D] font-Lato lg:flex z-50 lg:justify-between lg:items-center lg:px-[150px] fixed transition-[background] duration-300  ${isScroll ? "lg:bg-[#35455D]" : "lg:bg-transparent"}`}>
+            <header className={`h-[calc(2rem+9vmin)] md:h-[calc(1rem+5.8vmin)] lg:h-[calc(0.5rem+7vmin)] w-full bg-[#35455D] font-Lato lg:flex z-50 lg:justify-between lg:items-center lg:px-[150px] fixed transition-[background] duration-300  ${isScroll ? "lg:bg-[#35455D]" : "lg:bg-transparent"}`}>
                 <div className='h-16 flex justify-between px-5 '>
                     <Link to="/" className='flex justify-center items-center'>
                         <div className='flex justify-center items-center'>

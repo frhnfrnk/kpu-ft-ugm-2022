@@ -74,3 +74,15 @@ body::-webkit-scrollbar-thumb {
 .splide__arrow svg{
   fill: #8A2D2D !important;
 }
+
+.bgLetter{
+  background-image: url("../public/imgKritik/bgkritik.png");
+}
+
+@media screen and (max-width: 768px) {
+  .bgLetter{
+    background-image: url("../src/assets/decoration/letter.png");
+    
+  }
+}
+  

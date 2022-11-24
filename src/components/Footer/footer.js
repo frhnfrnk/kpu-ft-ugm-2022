@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import MenuItems from "../Header/MenuItem";
-import lineFooter from "../../assets/decoration/line_bottom.png";
+
+
 
 
 export default function Footer(props){

@@ -1,13 +1,8 @@
-import Backbaru from "../../assets/Calon/Backbaru.png";
-import inner1 from "../../assets/Calon/inner1.png";
-import inner2 from "../../assets/Calon/inner2.png";
+import Backbaru2 from "../../assets/Calon/backbaru2.png";
 import overlay from "../../assets/Calon/overlay.png";
 import Hiasan_choose from "../../assets/Calon/Hiasan_choose.png";
-import Group_71 from "../../assets/Calon/Group 71.png";
-import Group_73 from "../../assets/Calon/Group 71.png";
 import Frame_Calon from "../../assets/Calon/Frame_Calon.png";
 import Frame_Calon2 from "../../assets/Calon/Frame_Calon2.png";
-import Ariel from "../../assets/Calon/ariel.png";
 import lineFooter from "../../assets/decoration/line_bottom.png";
 import { useState } from "react";
 import Button from "../Button/button";
@@ -25,7 +20,7 @@ export default function Calon() {
     <>
       {/*Calon Section Start*/}
         <div className="bg-[#E1DAD1] h-full">
-          <div className="bg-cover bg-center w-full h-[120vh] bg-no-repeat flex flex-col content-center " style={{ backgroundImage: "url(" + Backbaru + ")" }}>          
+          <div className="bg-cover bg-center w-full h-[120vh] bg-no-repeat flex flex-col content-center " style={{ backgroundImage: "url(" + Backbaru2 + ")" }}>          
             <div className="text-center mt-[16vh] h-auto text-[#2A374A] mx-auto">
               <h1 className="font-Playfair-bold text-[28px] md:text-[50px]">Calon Ketua</h1>
               <p className="font-Lato text-[18px] md:text-[30px]">BEM KMFT UGM 2023</p>
@@ -44,16 +39,16 @@ export default function Calon() {
                 </div>
               </div>            
             </div> */}
-            <div className="flex flex-col lg:flex-row justify-center items-center lg:justify-around w-[60%] h-[60%] lg:h-[50%] mx-auto mt-[10vmin] lg:mt-[6vmin] mb-[8rem] lg:mb-0">
+            <div className="flex flex-col lg:flex-row justify-center items-center lg:justify-around w-[60%] h-[60%] lg:h-[40%] mx-auto mt-[10vmin] lg:mt-[6vmin] mb-[8rem] lg:mb-0">
               <div className="w-full lg:w-1/2 flex flex-col justify-center items-center cursor-pointer group transition-all  lg:pr-[5%]" onClick={() => {setIsOpen1(true)}}> 
                   <img src={Frame_Calon2} className="w-full md:w-[85%]" alt="calon_2"/>
-                  <div className="transition-all text-center w-[80%] md:w-[320px] lg:mr-[10px] mt-[-4.6rem] md:mt-[-8.3rem] lg:mt-0 bg-[rgba(138,45,45,0.85)] py-[8px] md:py-[12px] block text-[#E8E4E3] text-[14px] md:text-[25px] rounded-[8px] rounded-[20px] font-Playfair-semibold mx-auto lg:-translate-y-[7.3rem] group-hover:bg-[#E1DAD1] group-hover:text-[#8A2D2D]">
+                  <div className="transition-all text-center w-[80%] md:w-[320px] mt-[-4.6rem] md:mt-[-8.3rem] lg:mt-0 bg-[rgba(138,45,45,0.85)] py-[8px] md:py-[12px] block text-[#E8E4E3] text-[14px] md:text-[25px] rounded-[8px] lg:rounded-[20px] font-Playfair-semibold mx-auto lg:-translate-y-[7.3rem] group-hover:bg-[#E1DAD1] group-hover:text-[#8A2D2D]">
                     <h1 className="">Hilmi Naufal Zulfani</h1>
                   </div>
               </div>
               <div className="w-full lg:w-1/2 flex flex-col justify-center items-center cursor-pointer group transition-all  lg:pl-[5%]" onClick={() => {setIsOpen2(true)}}> 
                 <img src={Frame_Calon}  className="w-full md:w-[85%]" alt="calon_1"/>
-                <div className="transition-all text-center w-[80%] md:w-[320px] lg:mr-[10px] mt-[-4.6rem] md:mt-[-8.3rem] lg:mt-0 bg-[rgba(138,45,45,0.85)] py-[8px] md:py-[12px] block text-[#E8E4E3] text-[14px] md:text-[25px] rounded-[8px] rounded-[20px] font-Playfair-semibold mx-auto lg:-translate-y-[7.3rem] group-hover:bg-[#E1DAD1] group-hover:text-[#8A2D2D]">
+                <div className="transition-all text-center w-[80%] md:w-[320px] mt-[-4.6rem] md:mt-[-8.3rem] lg:mt-0 bg-[rgba(138,45,45,0.85)] py-[8px] md:py-[12px] block text-[#E8E4E3] text-[14px] md:text-[25px] rounded-[8px] lg:rounded-[20px] font-Playfair-semibold mx-auto lg:-translate-y-[7.3rem] group-hover:bg-[#E1DAD1] group-hover:text-[#8A2D2D]">
                   <h1 className="">Ariel Excelsio T.S</h1>
                 </div>
               </div>  
@@ -71,9 +66,9 @@ export default function Calon() {
         </div>
 
         { isOpen1 ? (
-          <div className="popup calon1 w-[96vw] md:w-[80vw] h-[auto] py-[20px] absolute top-[15vh] left-[50%] -ml-[48vw] md:-ml-[40vw] bg-[#D8CBBC] bg-center bg-no-repeat bg-cover flex justify-center items-center rounded-[40px] brightness-110 shadow-[0px_-6px_15px_2px_rgba(63,50,35,0.1),0px_8px_25px_1px_rgba(63,50,35,0.16),0px_35px_40px_2px_rgba(63,50,35,0.32)]" style={{ backgroundImage: "url(" + overlay + ")" }}>
-          <div className="popup-inner py-[20px] w-[95%] h-[95%] flex justify-center items-center border-[#8A2D2D] border-[6px] rounded-[40px]">
-            <div className="flex flex-col p-[25px] popup-inner2 w-[95%] h-[95%] flex justify-center items-center border-[#8A2D2D] border-[6px] rounded-[40px]">
+          <div className="popup calon1 w-[90vw] md:w-[80vw] h-[auto] py-[20px] absolute top-[15vh] left-[50%] -ml-[45vw] md:-ml-[40vw] bg-[#D8CBBC] bg-center bg-no-repeat bg-cover flex justify-center items-center rounded-[14px] lg:rounded-[40px] brightness-110 shadow-[0px_-6px_15px_2px_rgba(63,50,35,0.1),0px_8px_25px_1px_rgba(63,50,35,0.16),0px_35px_40px_2px_rgba(63,50,35,0.32)]" style={{ backgroundImage: "url(" + overlay + ")" }}>
+            <div className="popup-inner py-[10px] w-[95%] h-[95%] flex justify-center items-center border-[#8A2D2D] border-[2px] lg:border-[6px] rounded-[16px] lg:rounded-[40px]">
+                <div className="flex flex-col py-[20px] px-[25px] popup-inner2 w-[95%] h-[95%] flex justify-center items-center border-[#8A2D2D] border-[2px] lg:border-[6px] rounded-[10px] lg:rounded-[40px]">
               {/* Make a close btn */}
               <div className="close-btn absolute top-0 right-0 mt-[70px] mr-[50px] md:mt-[100px] md:mr-[100px]" onClick={() => {setIsOpen1(false)}}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#8A2D2D" stroke="#8A2D2D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-x cursor-pointer hover:text-white">
@@ -82,12 +77,12 @@ export default function Calon() {
                 </svg>
               </div>
 
-              <div className="flex md:flex-row flex-col h-auto">
-                <div className="w-full md:w-[30%] p-6">
-                  <img src={Frame_Calon2} className="w-[100%]"  alt="calon_1"/>
+              <div className="flex lg:flex-row flex-col h-auto mx-auto">
+                <div className="w-full lg:w-[30%] p-6 flex justify-center">
+                  <img src={Frame_Calon2} className="w-[60%] lg:w-[100%]"  alt="calon_1"/>
                 </div>
                 <div className="w-full md:w-[70%] py-3">
-                  <h1 className="font-Playfair-bold text-[40px] text-[#35455D]">Hilmi Naufal Zulfani</h1>
+                  <h1 className="font-Playfair-bold text-[14px] lg:text-[40px] text-[#35455D]">Hilmi Naufal Zulfani</h1>
                   <h3 className="font-Lato text-[24px] text-[#35455D]">Departemen Teknik Kimia</h3>
                   <h3 className="font-Playfair-bold text-[24px] text-[#35455D] mt-[20px]">Profil</h3>
                   <p className="text-[#151C25] text-[18px] font-Lato indent-8">Teknik atau engineering memiliki arti rekayasa. Tentu rekayasa di sini adalah upaya untuk merancang sesuatu yang bernilai positif dan bermanfaat bagi kehidupan manusia. Begitu juga dengan mahasiswanya yang merupakan para calon insinyur pembangun dan pelopor bangsa. Paradigma yang menjadikan seluruh csivitas atau warga menjadi seseorang yang pemikir, solid, dan disiplin, tetapi tetap peduli dan menyenangkan karena untuk Teknik jelas “No Party, No Happy”.</p>
@@ -120,9 +115,9 @@ export default function Calon() {
         ) : null } 
 
         { isOpen2 ? (
-             <div className="popup calon1 w-[96vw] md:w-[80vw] h-[auto] py-[20px] absolute top-[15vh] left-[50%] -ml-[48vw] md:-ml-[40vw] bg-[#D8CBBC] bg-center bg-no-repeat bg-cover flex justify-center items-center rounded-[40px] brightness-110 shadow-[0px_-6px_15px_2px_rgba(63,50,35,0.1),0px_8px_25px_1px_rgba(63,50,35,0.16),0px_35px_40px_2px_rgba(63,50,35,0.32)]" style={{ backgroundImage: "url(" + overlay + ")" }}>
-              <div className="popup-inner py-[20px] w-[95%] h-[95%] flex justify-center items-center border-[#8A2D2D] border-[6px] rounded-[40px]">
-                <div className="flex flex-col p-[25px] popup-inner2 w-[95%] h-[95%] flex justify-center items-center border-[#8A2D2D] border-[6px] rounded-[40px]">
+             <div className="popup calon1 w-[90vw] md:w-[80vw] h-[auto] py-[20px] absolute top-[15vh] left-[50%] -ml-[45vw] md:-ml-[40vw] bg-[#D8CBBC] bg-center bg-no-repeat bg-cover flex justify-center items-center rounded-[14px] lg:rounded-[40px] brightness-110 shadow-[0px_-6px_15px_2px_rgba(63,50,35,0.1),0px_8px_25px_1px_rgba(63,50,35,0.16),0px_35px_40px_2px_rgba(63,50,35,0.32)]" style={{ backgroundImage: "url(" + overlay + ")" }}>
+              <div className="popup-inner py-[10px] w-[95%] h-[95%] flex justify-center items-center border-[#8A2D2D] border-[2px] lg:border-[6px] rounded-[16px] lg:rounded-[40px]">
+                <div className="flex flex-col py-[20px] px-[25px] popup-inner2 w-[95%] h-[95%] flex justify-center items-center border-[#8A2D2D] border-[2px] lg:border-[6px] rounded-[10px] lg:rounded-[40px]">
                   {/* Make a close btn */}
                   <div className="close-btn absolute top-0 right-0 mt-[70px] mr-[50px] lg:mt-[100px] lg:mr-[100px]" onClick={() => {setIsOpen2(false)}}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#8A2D2D" stroke="#8A2D2D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-x cursor-pointer hover:text-white">
@@ -131,42 +126,44 @@ export default function Calon() {
                     </svg>
                   </div>
 
-                  <div className="flex lg:flex-row flex-col h-auto">
-                    <div className="w-full lg:w-[30%] p-6">
-                      <img src={Ariel} className="w-[100%]"  alt="calon_2"/>
+                  <div className="flex lg:flex-row flex-col h-auto mx-auto">
+                    <div className="w-full lg:w-[30%] p-6 flex justify-center">
+                      <img src={Frame_Calon} className="w-[60%] lg:w-[100%]"  alt="calon_2"/>
                     </div>
-                    <div className="w-full lg:w-[70%] py-3">
-                      <h1 className="font-Playfair-bold text-[40px] text-[#35455D]">Ariel Excelsio</h1>
-                      <h3 className="font-Lato text-[24px] text-[#35455D]">Departemen Teknik Nuklir dan Teknik Fisika</h3>
-                      <h3 className="font-Playfair-bold text-[24px] text-[#35455D] mt-[20px]">Profil</h3>
-                      <p className="text-[#151C25] text-[18px] font-Lato indent-8">Ariel Excelsio Tandirerung Senobua, mahasiswa Departemen Teknik Nuklir dan Fisika angkatan 2020. Lahir di Depok, 26 Desember 2002 besar di Tangerang Selatan dan sekarang menimba ilmu di kota istimewa, Yogyakarta. Seperti mahasiswa pada umumnya yang mencari jati diri dunia perkuliahan untuk mempersiapkan diri jadi manusia dewasa. Semua berawal dari departemen tercinta DTNTF, di angkatan 2020 panggilan hati memanggil untuk menjadi Koordinator Angkatan 2020 yang kemudian berlanjut menjadi Ketua Angkatan, jabatan yang ditanggung tanpa masa jabatan.</p>
+                    <div className="w-full lg:w-[70%] py-0 lg:py-3">
+                      <h1 className="font-Playfair-bold text-[16px] text-center lg:text-[40px] text-[#35455D]">Ariel Excelsio</h1>
+                      <h3 className="font-Lato text-center text-[14px] lg:text-[24px] text-[#35455D]">Departemen Teknik Nuklir dan Teknik Fisika</h3>
+                      <h3 className="font-Playfair-bold text-[14px] lg:text-[24px] text-[#35455D] mt-[20px]">Profil</h3>
+                      <p className="text-[#151C25] text-[12px] lg:text-[18px] font-Lato indent-8 text-justify">Ariel Excelsio Tandirerung Senobua, mahasiswa Departemen Teknik Nuklir dan Fisika angkatan 2020. Lahir di Depok, 26 Desember 2002 besar di Tangerang Selatan dan sekarang menimba ilmu di kota istimewa, Yogyakarta. Seperti mahasiswa pada umumnya yang mencari jati diri dunia perkuliahan untuk mempersiapkan diri jadi manusia dewasa. Semua berawal dari departemen tercinta DTNTF, di angkatan 2020 panggilan hati memanggil untuk menjadi Koordinator Angkatan 2020 yang kemudian berlanjut menjadi Ketua Angkatan, jabatan yang ditanggung tanpa masa jabatan.</p>
                     </div>
                   </div>
                   <div>
-                    <p className="text-[#151C25] text-[18px] font-Lato indent-8"> Organisasi pertama, BEM KM UGM menjadi tempat singgah pertama untuk belajar organisasi di tingkat Universitas. Dengan segala lika-liku baik-buruk didalamnya diputuskan untuk meninggalkan organisasi tersebut dan memulai kisah baru di BEM KMFT. Ditambah dengan kisah luar biasa dari PPSMB Kesatria, membuka mata dan pikiran tentang fakultas terbaik dan terbesar di Universitas Gadjah Mada, Fakultas Teknik. Slogan teknik satu, teknik jaya, teknik Universitas Gadjah Mada membekas di hati dan jiwa. Dan itulah alasan utama kenapa Saya ingin mewujudkan slogan tersebut tidak hanya diucapkan namun diaplikasikan dan resapi setiap jiwa mahasiswa Fakultas Teknik Universitas Gadjah Mada, dan menurut saya BEM KMFT UGM merupakan wadah terbaik untuk itu. Dari niat sederhana tersebut terwujudlah gerakan berani untuk mencalonkan diri sebagai Calon Ketua BEM KMFT UGM periode selanjutnya. </p>
+                    <p className="text-[#151C25] text-[12px] lg:text-[18px] text-justify font-Lato indent-8"> Organisasi pertama, BEM KM UGM menjadi tempat singgah pertama untuk belajar organisasi di tingkat Universitas. Dengan segala lika-liku baik-buruk didalamnya diputuskan untuk meninggalkan organisasi tersebut dan memulai kisah baru di BEM KMFT. Ditambah dengan kisah luar biasa dari PPSMB Kesatria, membuka mata dan pikiran tentang fakultas terbaik dan terbesar di Universitas Gadjah Mada, Fakultas Teknik. Slogan teknik satu, teknik jaya, teknik Universitas Gadjah Mada membekas di hati dan jiwa. Dan itulah alasan utama kenapa Saya ingin mewujudkan slogan tersebut tidak hanya diucapkan namun diaplikasikan dan resapi setiap jiwa mahasiswa Fakultas Teknik Universitas Gadjah Mada, dan menurut saya BEM KMFT UGM merupakan wadah terbaik untuk itu. Dari niat sederhana tersebut terwujudlah gerakan berani untuk mencalonkan diri sebagai Calon Ketua BEM KMFT UGM periode selanjutnya. </p>
                   </div>
                   <div className="w-full">
-                    <h3 className="font-Playfair-bold text-[24px] text-[#35455D] mt-[20px]">Visi</h3>
-                    <p className="text-[#151C25] text-[18px] font-Lato">BEM KMFT UGM sebagai wadah kolaborasi yang dinamis dan relevan untuk mewujudkan sinergitas satu teknik.</p>
+                    <h3 className="font-Playfair-bold text-[14px] lg:text-[24px] text-[#35455D] mt-[20px]">Visi</h3>
+                    <p className="text-[#151C25] text-[12px] lg:text-[18px] font-Lato">BEM KMFT UGM sebagai wadah kolaborasi yang dinamis dan relevan untuk mewujudkan sinergitas satu teknik.</p>
                   </div>
                   <div className="w-full">
-                    <h3 className="font-Playfair-bold text-[24px] text-[#35455D] mt-[20px]">Misi</h3>
-                    <ul className="list-decimal px-[20px]">
-                      <li className="text-[#151C25] text-[18px] font-Lato">Mengoptimalkan fungsi support system demi terlaksananya tata kelola organisasi yang ideal</li>
-                      <li className="text-[#151C25] text-[18px] font-Lato">Mewadahi segala kebutuhan yang terkait dengan pengembangan kreativitas dan kesejahteraan mahasiswa</li>
-                      <li className="text-[#151C25] text-[18px] font-Lato">Menginisiasi gerakan yang dinamis berbasis keteknikan</li>
-                      <li className="text-[#151C25] text-[18px] font-Lato">Menyebar kebermanfaatan melalui pengabdian kepada masyarakat</li>
-                      <li className="text-[#151C25] text-[18px] font-Lato">Mengembangkan ruang ruang kolaborasi dengan seluruh stakeholder di dalam dan luar Fakultas Teknik</li>
+                    <h3 className="font-Playfair-bold text-[14px] lg:text-[24px] text-[#35455D] mt-[20px]">Misi</h3>
+                    <ul className="list-decimal px-[20px] text-[12px] lg:text-[18px] text-[#151C25] font-Lato text-justify">
+                      <li >Mengoptimalkan fungsi support system demi terlaksananya tata kelola organisasi yang ideal</li>
+                      <li >Mewadahi segala kebutuhan yang terkait dengan pengembangan kreativitas dan kesejahteraan mahasiswa</li>
+                      <li >Menginisiasi gerakan yang dinamis berbasis keteknikan</li>
+                      <li >Menyebar kebermanfaatan melalui pengabdian kepada masyarakat</li>
+                      <li >Mengembangkan ruang ruang kolaborasi dengan seluruh stakeholder di dalam dan luar Fakultas Teknik</li>
                     </ul>
                   </div>
                   <div className="w-full">
-                    <h3 className="font-Playfair-bold text-[24px] text-[#35455D] mt-[20px]">Daftar Riwayat Hidup</h3>
+                    <h3 className="font-Playfair-bold text-[14px] lg:text-[24px] text-[#35455D] mt-[20px]">Daftar Riwayat Hidup</h3>
                     <iframe className="rounded-[10px] w-[100%] h-[50vh]" src="https://drive.google.com/file/d/1Xp5G3UbrtGHxCgZdGxMdIp9lrSzpJL2q/preview" title="CV Ariel Excelcio"></iframe>
                   </div>
                 </div>
               </div>
             </div>  
-            ) : null } 
+            ) : null }
+
+
       {/*Calon Section End*/}  
     </>
   );

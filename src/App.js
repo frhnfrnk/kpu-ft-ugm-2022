@@ -9,6 +9,8 @@ import Footer from "./components/Footer/footer";
 
 import './index.css';
 import { StateProvider } from "./components/Context/context";
+import GoToTop from "./components/GoToTop/goToTop";
+import Vote from "./pages/Vote";
 
 function App() {
   return (
@@ -22,7 +24,9 @@ function App() {
               <Route exact path="/info-calon" element={<InfoCalon />} />
               <Route exact path="/terimakasih" element={<Terimakasih />} />
               <Route exact path="/tentang" element={<Tentang />} />
+              <Route exact path="/vote" element={<Vote />} />
             </Routes>
+            <GoToTop />
             <Footer />
           </StateProvider>
         </Router>

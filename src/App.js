@@ -15,7 +15,6 @@ import { useContext } from "react";
 import { StateContext } from "./components/Context/context";
 
 function App() {
-
   const {profile} = useContext(StateContext)
   console.log(profile)
 

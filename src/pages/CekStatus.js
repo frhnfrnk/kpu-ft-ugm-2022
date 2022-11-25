@@ -3,33 +3,52 @@ import Hiasan_choose from "../assets/Calon/Hiasan_choose.png";
 import lineFooter from "../assets/decoration/line_bottom.png";
 import { useState } from "react";
 import Fade from 'react-reveal/Fade';
+import axios from "axios";
 
-
+  
 function CekStatus() {
 
   const [data, setData] = useState("");
   const [isRegistered, setIsRegistered] = useState(false);
 
-  const notRegistered = document.getElementById("notRegistered");
+  const [database, setDatabase] = useState({});
+
+  const [notRegistered, setNotRegistered] = useState("hidden");
   const result = document.getElementById("result");
 
   const handleChange = (event) => {
     setIsRegistered(false)
     setData(event.target.value);
   }
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
       e.preventDefault()
+      await axios({
+          baseURL: process.env.REACT_API_URL || "http://localhost:5000",
+          method: "GET",
+          url:`/users/${data}`,
+        })
+        .then((response) => {
+          setDatabase(response.data);
+          if(response.data.Email === undefined) {
+            setIsRegistered(false);
+            setNotRegistered("block")
+          }
+          else{
+            setIsRegistered(true);
+            setNotRegistered("hidden")
+          }
+        })
+        .catch((error) => {
+          if (error.response) {
+            console.log(error.response)
+            console.log(error.response.status)
+            console.log(error.response.headers)
+            }
+        })
       // Dummy data
-      if(data === "482306"){
-        notRegistered.style.display = "hidden";
-        setIsRegistered(true);
-      }
-      else{
-        notRegistered.style.display = "block";
-        setIsRegistered(false);
-      }
+      
   }
-
+  
 
   return (
     <>
@@ -64,10 +83,10 @@ function CekStatus() {
                     <li>:</li>
                   </ul>
                   <ul>
-                    <li>Farhan Franaka</li>
-                    <li>21/482306/TK/53250</li>
-                    <li>S1 Teknologi Informasi</li>
-                    <li>farhan.franaka@mail.ugm.ac.id</li>
+                    <li>{database.Name}</li>
+                    <li>{database.Nim}</li>
+                    <li>{database.Jurusan}</li>
+                    <li>{database.Email}</li>
                   </ul>
                 </div>
               </div>
@@ -75,7 +94,7 @@ function CekStatus() {
           </Fade>
         :
         <Fade top>
-          <div id="notRegistered" className="hidden font-Lato font-bold my-[50px] text-[30px] text-[#8A2D2D]">
+          <div id="notRegistered" className={`${notRegistered} font-Lato font-bold my-[50px] text-[30px] text-[#8A2D2D]`}>
             NIU Anda Tidak Terdaftar!
           </div>
         </Fade>

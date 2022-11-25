@@ -38,7 +38,7 @@ function Calonnew(){
             </div>
 
             <div>
-                <Button text="Tentang Calon" sizeText="24px" />
+                <Button to="/info-calon" text="Tentang Calon" sizeText="24px" />
                 <img src={lineFooter} alt="line" className="mt-[10vh] w-full h-[auto]"/>
             </div>
             

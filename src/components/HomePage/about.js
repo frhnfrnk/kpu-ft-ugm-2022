@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import aboutImg from "../../assets/Logo/aboutImg.png"
-import Button from "../Button/button";
 
 function Tentang(){
     return(

@@ -6,7 +6,6 @@ import lineFooter from "../assets/decoration/line_bottom.png";
 import { useState } from "react";
 import { useContext } from "react";
 import { StateContext } from "../components/Context/context";
-import Button from "../components/Button/button";
 import {Helmet} from "react-helmet";
 import { Navigate, redirect, useNavigate } from "react-router-dom";
 
@@ -14,6 +13,7 @@ import { Navigate, redirect, useNavigate } from "react-router-dom";
 export default function Vote() {
 
   const [isOpen, setIsOpen] = useState(false);
+  const {profile} = useContext(StateContext)
   const [isLoading, setIsLoading] = useState(false);
   const [calon, setCalon] = useState("");
   let navigate = useNavigate();
@@ -30,6 +30,8 @@ export default function Vote() {
         }, 2000);
   }
 
+  
+
   return (
     <>
         <Helmet>
@@ -39,7 +41,7 @@ export default function Vote() {
         <div className="bg-[#E1DAD1] h-full">
           <div className="bg-cover bg-center w-full h-[120vh] bg-no-repeat flex flex-col content-center " style={{ backgroundImage: "url(" + Backbaru2 + ")" }}>          
             <div className="text-center mt-[16vh] h-auto text-[#2A374A] mx-auto">
-              <p className="font-Lato text-[12px] md:text-[20px]" >Anda masuk sebagai raflyzaki2902@mail.ugm.ac.id</p>
+              <p className="font-Lato text-[12px] md:text-[20px]" >Anda masuk sebagai <span className="font-bold text-[rgba(138,45,45,1)]">{profile.email}</span></p>
               <h1 className="font-Playfair-bold text-[28px] md:text-[50px]">CALON KETUA BEM KMFT UGM 2023</h1>
               <p className="font-Lato text-[18px] md:text-[20px]">Klik Calon Ketua Pilihanmu!</p>
             </div>

@@ -53,7 +53,7 @@ export default function Calon() {
                 </div>
               </div>  
             </div>
-            {isCompleted ? <Button text="Vote Sekarang" sizeText="20px"/> : 
+            {isCompleted ? <Button to="/vote" text="Vote Sekarang" sizeText="20px"/> : 
               <div className="flex justify-center">
                 <button href="#" className="bg-gradient-to-r from-[#959595] to-[#959595] text-[#FFFFFF] rounded-full px-6 py-2 font-semibold shadow-[0px_4px_10px_rgba(55,18,18,0.25)] cursor-default">Vote Ditutup</button>
               </div>

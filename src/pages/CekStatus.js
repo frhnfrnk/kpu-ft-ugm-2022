@@ -2,6 +2,7 @@ import BackCekStatus from "../assets/CekStatus/BackCekStatus.png";
 import Hiasan_choose from "../assets/Calon/Hiasan_choose.png";
 import lineFooter from "../assets/decoration/line_bottom.png";
 import { useState } from "react";
+import Fade from 'react-reveal/Fade';
 
 
 function CekStatus() {
@@ -43,37 +44,41 @@ function CekStatus() {
             </form>
           </div>
           {isRegistered ? 
-          <div id="result" className="w-[90%] md:w-[45%] mt-[5vh] lg:mt-[10vh] rounded-[12px] lg:rounded-[20px] h-[40vh] md:h-[40vh] bg-[#35455D] flex justify-center items-center">
-            <div id="confirm" className="w-[97%] h-[97%] lg:h-[90%] border-[3px] rounded-[15px] lg:rounded-[40px] flex flex-col justify-center items-center mx-auto">
-              <h3 className="text-[#E1DAD1] text-[24px] md:text-[30px] mb-[20px]">
-                NIU Anda Terdaftar
-              </h3>
-              <div className="text-[#E1DAD1] font-Lato md:text-[20px] text-[14px] flex">
-                <ul>
-                  <li>Nama</li>
-                  <li>NIM</li>
-                  <li>Prodi</li>
-                  <li>Email</li>
-                </ul>
-                <ul className="mx-[25px]">
-                  <li>:</li>
-                  <li>:</li>
-                  <li>:</li>
-                  <li>:</li>
-                </ul>
-                <ul>
-                  <li>Farhan Franaka</li>
-                  <li>21/482306/TK/53250</li>
-                  <li>S1 Teknologi Informasi</li>
-                  <li>farhan.franaka@mail.ugm.ac.id</li>
-                </ul>
+          <Fade top>
+            <div id="result" className="w-[90%] md:w-[45%] mt-[5vh] lg:mt-[10vh] rounded-[12px] lg:rounded-[20px] h-[40vh] md:h-[40vh] bg-[#35455D] flex justify-center items-center">
+              <div id="confirm" className="w-[97%] h-[97%] lg:h-[90%] border-[3px] rounded-[15px] lg:rounded-[40px] flex flex-col justify-center items-center mx-auto">
+                <h3 className="text-[#E1DAD1] text-[24px] md:text-[30px] mb-[20px]">
+                  NIU Anda Terdaftar
+                </h3>
+                <div className="text-[#E1DAD1] font-Lato md:text-[20px] text-[14px] flex">
+                  <ul>
+                    <li>Nama</li>
+                    <li>NIM</li>
+                    <li>Prodi</li>
+                    <li>Email</li>
+                  </ul>
+                  <ul className="mx-[25px]">
+                    <li>:</li>
+                    <li>:</li>
+                    <li>:</li>
+                    <li>:</li>
+                  </ul>
+                  <ul>
+                    <li>Farhan Franaka</li>
+                    <li>21/482306/TK/53250</li>
+                    <li>S1 Teknologi Informasi</li>
+                    <li>farhan.franaka@mail.ugm.ac.id</li>
+                  </ul>
+                </div>
               </div>
-            </div>
-        </div>
+          </div>
+          </Fade>
         :
-        <div id="notRegistered" className="hidden font-Lato font-bold my-[50px] text-[30px] text-[#8A2D2D]">
-          NIU Anda Tidak Terdaftar!
-        </div>
+        <Fade top>
+          <div id="notRegistered" className="hidden font-Lato font-bold my-[50px] text-[30px] text-[#8A2D2D]">
+            NIU Anda Tidak Terdaftar!
+          </div>
+        </Fade>
         }
         </div>     
       </div>

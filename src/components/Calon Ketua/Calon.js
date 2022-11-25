@@ -8,6 +8,7 @@ import { useState } from "react";
 import Button from "../Button/button";
 import { useContext } from "react";
 import { StateContext } from "../Context/context";
+import { Fade, Zoom } from "react-reveal";
 
 export default function Calon() {
 
@@ -21,10 +22,12 @@ export default function Calon() {
       {/*Calon Section Start*/}
         <div className="bg-[#E1DAD1] h-full">
           <div className="bg-cover bg-center w-full h-[120vh] bg-no-repeat flex flex-col content-center " style={{ backgroundImage: "url(" + Backbaru2 + ")" }}>          
-            <div className="text-center mt-[16vh] h-auto text-[#2A374A] mx-auto">
-              <h1 className="font-Playfair-bold text-[28px] md:text-[50px]">Calon Ketua</h1>
-              <p className="font-Lato text-[18px] md:text-[30px]">BEM KMFT UGM 2023</p>
-            </div>
+            <Fade top>
+              <div className="text-center mt-[16vh] h-auto text-[#2A374A] mx-auto">
+                <h1 className="font-Playfair-bold text-[28px] md:text-[50px]">Calon Ketua</h1>
+                <p className="font-Lato text-[18px] md:text-[30px]">BEM KMFT UGM 2023</p>
+              </div>
+            </Fade>
             {/* <div className="grid lg:grid-cols-12 lg:px-[170px] justify-center">
               <div className="flex flex-col lg:col-span-4 lg:col-start-2 cursor-pointer group transition-all" onClick={() => {setIsOpen(true)}}> 
                 <img src={Frame_Calon2} alt="calon_2"/>
@@ -40,27 +43,35 @@ export default function Calon() {
               </div>            
             </div> */}
             <div className="flex flex-col lg:flex-row justify-center items-center lg:justify-around w-[60%] h-[60%] lg:h-[40%] mx-auto mt-[10vmin] lg:mt-[6vmin] mb-[8rem] lg:mb-0">
-              <div className="w-full lg:w-1/2 flex flex-col justify-center items-center cursor-pointer group transition-all  lg:pr-[5%]" onClick={() => {setIsOpen1(true)}}> 
-                  <img src={Frame_Calon2} className="w-full md:w-[85%]" alt="calon_2"/>
-                  <div className="transition-all text-center w-[80%] md:w-[320px] mt-[-4.6rem] md:mt-[-8.3rem] lg:mt-0 bg-[rgba(138,45,45,0.85)] py-[8px] md:py-[12px] block text-[#E8E4E3] text-[14px] md:text-[25px] rounded-[8px] lg:rounded-[20px] font-Playfair-semibold mx-auto lg:-translate-y-[7.3rem] group-hover:bg-[#E1DAD1] group-hover:text-[#8A2D2D]">
-                    <h1 className="">Hilmi Naufal Zulfani</h1>
-                  </div>
-              </div>
-              <div className="w-full lg:w-1/2 flex flex-col justify-center items-center cursor-pointer group transition-all  lg:pl-[5%]" onClick={() => {setIsOpen2(true)}}> 
-                <img src={Frame_Calon}  className="w-full md:w-[85%]" alt="calon_1"/>
-                <div className="transition-all text-center w-[80%] md:w-[320px] mt-[-4.6rem] md:mt-[-8.3rem] lg:mt-0 bg-[rgba(138,45,45,0.85)] py-[8px] md:py-[12px] block text-[#E8E4E3] text-[14px] md:text-[25px] rounded-[8px] lg:rounded-[20px] font-Playfair-semibold mx-auto lg:-translate-y-[7.3rem] group-hover:bg-[#E1DAD1] group-hover:text-[#8A2D2D]">
-                  <h1 className="">Ariel Excelsio T.S</h1>
+              <Fade left>
+                <div className="w-full lg:w-1/2 flex flex-col justify-center items-center cursor-pointer group transition-all  lg:pr-[5%]" onClick={() => {setIsOpen1(true)}}> 
+                    <img src={Frame_Calon2} className="w-full md:w-[85%]" alt="calon_2"/>
+                    <div className="transition-all text-center w-[80%] md:w-[320px] mt-[-4.6rem] md:mt-[-8.3rem] lg:mt-0 bg-[rgba(138,45,45,0.85)] py-[8px] md:py-[12px] block text-[#E8E4E3] text-[14px] md:text-[25px] rounded-[8px] lg:rounded-[20px] font-Playfair-semibold mx-auto lg:-translate-y-[7.3rem] group-hover:bg-[#E1DAD1] group-hover:text-[#8A2D2D]">
+                      <h1 className="">Hilmi Naufal Zulfani</h1>
+                    </div>
                 </div>
-              </div>  
+              </Fade>
+              <Fade right>
+                <div className="w-full lg:w-1/2 flex flex-col justify-center items-center cursor-pointer group transition-all  lg:pl-[5%]" onClick={() => {setIsOpen2(true)}}> 
+                  <img src={Frame_Calon}  className="w-full md:w-[85%]" alt="calon_1"/>
+                  <div className="transition-all text-center w-[80%] md:w-[320px] mt-[-4.6rem] md:mt-[-8.3rem] lg:mt-0 bg-[rgba(138,45,45,0.85)] py-[8px] md:py-[12px] block text-[#E8E4E3] text-[14px] md:text-[25px] rounded-[8px] lg:rounded-[20px] font-Playfair-semibold mx-auto lg:-translate-y-[7.3rem] group-hover:bg-[#E1DAD1] group-hover:text-[#8A2D2D]">
+                    <h1 className="">Ariel Excelsio T.S</h1>
+                  </div>
+                </div>  
+              </Fade>  
             </div>
             {isCompleted ? <Button to="/vote" text="Vote Sekarang" sizeText="20px"/> : 
-              <div className="flex justify-center">
-                <button href="#" className="bg-gradient-to-r from-[#959595] to-[#959595] text-[#FFFFFF] rounded-full px-6 py-2 font-semibold shadow-[0px_4px_10px_rgba(55,18,18,0.25)] cursor-default">Vote Ditutup</button>
-              </div>
+              <Fade bottom>
+                <div className="flex justify-center">
+                  <button href="#" className="bg-gradient-to-r from-[#959595] to-[#959595] text-[#FFFFFF] rounded-full px-6 py-2 font-semibold shadow-[0px_4px_10px_rgba(55,18,18,0.25)] cursor-default">Vote Ditutup</button>
+                </div>
+              </Fade>
             }
           </div>  
           <div className="h-[80vh] flex justify-center items-center mb-[10vh]">
-            <img src={Hiasan_choose} alt="hiasan" className=""/>
+            <Zoom>
+              <img src={Hiasan_choose} alt="hiasan" className=""/>
+            </Zoom>
           </div>
           <img src={lineFooter} alt="line" className="w-full h-auto"/>
         </div>

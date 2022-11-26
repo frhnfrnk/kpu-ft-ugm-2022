@@ -1,7 +1,13 @@
 import bgError from "../assets/TentangKPU/BgError.png";
+import {Helmet} from "react-helmet";
+
+
 function Error() {
   return (
     <>
+      <Helmet>
+        <title>404 Not Found</title>
+      </Helmet>
       <div class="bg-[#E1DAD1] h-full w-full">
         <div
           class="lg:bg-cover bg-cover bg-center flex justify-center items-center

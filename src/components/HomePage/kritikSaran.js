@@ -2,7 +2,7 @@ import Button from "../Button/button";
 import bgBottom from "../../assets/decoration/bgBottom.png";
 import lineFooter from "../../assets/decoration/line_bottom.png";
 import { useState } from "react";
-// import { GoogleSpreadsheet } from "google-spreadsheet";
+import { GoogleSpreadsheet } from "google-spreadsheet";
 
 
 function Kritik(){
@@ -40,16 +40,16 @@ function Kritik(){
 
 
 
-    // const handleInputChange = (event) => {
-    //     setFormData({
-    //         ...formData,
-    //         [event.target.name]: event.target.value
-    //     })
-    // }
-    // const handleSubmit = (event) => {
-    //     event.preventDefault()
-    //     appendSpreadsheet(formData)
-    // }
+//     const handleInputChange = (event) => {
+//         setFormData({
+//             ...formData,
+//             [event.target.name]: event.target.value
+//         })
+//     }
+//     const handleSubmit = (event) => {
+//         event.preventDefault()
+//         appendSpreadsheet(formData)
+//     }
     
 
     return(

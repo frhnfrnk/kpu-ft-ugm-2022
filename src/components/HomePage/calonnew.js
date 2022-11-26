@@ -5,7 +5,7 @@ import Fade from "react-reveal/Fade";
 
 function Calonnew(){
     return(
-        <div className="bgLetter static bg-[#E1DAD1] lg:h-[100vh] md:h-[170vh] h-[130vh] md:pt-[0vh] lg:pt-[10vh] bg-no-repeat bg-cover bg-center"
+        <div className="bgLetter static bg-[#E1DAD1] lg:h-[100vh] md:h-[auto] h-[auto] md:pt-[0vh] lg:pt-[10vh] bg-no-repeat bg-cover bg-center"
         >
             <div className="lg:flex lg:justify-center lg:space-x-[30vh]"
             >
@@ -43,7 +43,7 @@ function Calonnew(){
             </div>
 
             <div>
-                <Button to="/info-calon" text="Tentang Calon" sizeText="24px" />
+                <Button to="/info-calon" text="Tentang Calon" sizeTextlg="24px" sizeTextmd="20px" sizeText="16px"/>
                 <img src={lineFooter} alt="line" className="mt-[10vh] w-full h-[auto]"/>
             </div>
             

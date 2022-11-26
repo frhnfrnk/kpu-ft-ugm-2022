@@ -3,7 +3,7 @@ import Fade from 'react-reveal/Fade';
 
 function Tentang(){
     return(
-        <div className="w-full md:pt-[15vh] md:h-[40vh] lg:h-[80vh] h-[30vh] bg-no-repeat bg-cover bg-center my-[10vh]"
+        <div className="w-full md:mt-[15vh] md:h-[50vh] lg:h-[80vh] h-[30vh] bg-no-repeat bg-cover bg-center my-[10vh]"
         >
             <div className="flex justify-center">
                 <h1 className="lg:hidden block flex text-center text-[#2A374A] font-Playfair-semibold text-[20px] md:text-[32px]">

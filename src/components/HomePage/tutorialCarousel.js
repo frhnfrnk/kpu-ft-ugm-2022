@@ -19,22 +19,22 @@ export default function TutorCarousel() {
 
 
       <SplideSlide>
-        <img src={First} className="mx-auto w-[70%]" alt="First" />
+        <img src={First} className="border-2 border-[#8A2D2D] rounded-[4px] mx-auto w-[70%]" alt="First" />
       </SplideSlide>
       <SplideSlide>
-        <img src={Second} className="mx-auto w-[70%]" alt="Second" />
+        <img src={Second} className="border-2 border-[#8A2D2D] rounded-[4px] mx-auto w-[70%]" alt="Second" />
       </SplideSlide>
       <SplideSlide>
-        <img src={Third} className="mx-auto w-[70%]" alt="Third" />
+        <img src={Third} className="border-2 border-[#8A2D2D] rounded-[4px] mx-auto w-[70%]" alt="Third" />
       </SplideSlide>
       <SplideSlide>
-        <img src={Fourth} className="mx-auto w-[70%]" alt="Fourth" />
+        <img src={Fourth} className="border-2 border-[#8A2D2D] rounded-[4px] mx-auto w-[70%]" alt="Fourth" />
       </SplideSlide>
       <SplideSlide>
-        <img src={Fifth} className="mx-auto w-[70%]" alt="Fifth" />
+        <img src={Fifth} className="border-2 border-[#8A2D2D] rounded-[4px] mx-auto w-[70%]" alt="Fifth" />
       </SplideSlide>
       <SplideSlide>
-        <img src={Six} className="mx-auto w-[70%]" alt="Six" />
+        <img src={Six} className="border-2 border-[#8A2D2D] rounded-[4px] mx-auto w-[70%]" alt="Six" />
       </SplideSlide>
     </Splide>
   );

@@ -11,8 +11,12 @@ import Footer from "./components/Footer/footer";
 import './index.css';
 import GoToTop from "./components/GoToTop/goToTop";
 import Vote from "./pages/Vote";
+import { useContext } from "react";
+import { StateContext } from "./components/Context/context";
 
 function App() {
+  
+  const {isLogin, isChoose} = useContext(StateContext)
   
 
   return (
@@ -23,9 +27,9 @@ function App() {
             <Route exact path="/" element={<Beranda />} />
             <Route exact path="*" element={<Error />} />
             <Route exact path="/info-calon" element={<InfoCalon />} />
-            <Route exact path="/terimakasih" element={<Terimakasih />} />
+            <Route exact path="/terimakasih" element={isChoose ? <Terimakasih /> : <Navigate to="/" />} />
             <Route exact path="/tentang" element={<Tentang />} />
-            <Route exact path="/vote" element={<Vote />} />
+            <Route exact path="/vote" element={isLogin ? <Vote /> : <Navigate to="/" />} />
             <Route exact path="/cek-status" element={<CekStatus />} />
           </Routes>
           <GoToTop />

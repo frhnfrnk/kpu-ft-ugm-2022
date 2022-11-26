@@ -2,7 +2,6 @@ import Button from "../Button/button";
 import bgBottom from "../../assets/decoration/bgBottom.png";
 import lineFooter from "../../assets/decoration/line_bottom.png";
 import { useState } from "react";
-import { GoogleSpreadsheet } from "google-spreadsheet";
 
 
 function Kritik(){

@@ -9,12 +9,54 @@ import { StateContext } from "../components/Context/context";
 import {Helmet} from "react-helmet";
 import { Navigate, redirect, useNavigate } from "react-router-dom";
 import {Fade, Zoom} from 'react-reveal';
+import axios from "axios";
+import { useEffect } from "react";
 
 
 export default function Vote() {
+  const {profile} = useContext(StateContext)
+  const [database, setDatabase]= useState({})  
+
+  useEffect(() => {
+    axios({
+      baseURL: process.env.REACT_API_URL || "http://env-1613447.user.cloudjkt01.com",
+      method: "GET",
+      url:`/users/${profile.email}`,
+    })
+    .then((response) => {
+      setDatabase(response.data);
+    })
+    .catch((error) => {
+      if (error.response) {
+        console.log(error.response)
+        console.log(error.response.status)
+        console.log(error.response.headers)
+        }
+    });
+
+    axios({
+      baseURL: process.env.REACT_API_URL || "http://env-1613447.user.cloudjkt01.com",
+      method: "POST",
+      url:`/auth/login`,
+      data: {
+        "Email": profile.email,
+        "googleId": profile.googleId,
+        "Name": profile.name,
+      },
+      headers:{
+        "Content-Type": "application/json",
+      }
+    })
+    .catch((error) => {
+      if (error.response) {
+        console.log(error.response)
+        console.log(error.response.status)
+        console.log(error.response.headers)
+        }
+    });
+  },[profile.email, profile.googleId, profile.name])
 
   const [isOpen, setIsOpen] = useState(false);
-  const {profile} = useContext(StateContext)
   const [isLoading, setIsLoading] = useState(false);
   const [calon, setCalon] = useState("");
   let navigate = useNavigate();
@@ -25,12 +67,38 @@ export default function Vote() {
 
   const handleSubmit = async () =>{
     setIsLoading(true);
+    var paslon = calon.charAt(calon.length - 1)
+    await axios({
+      baseURL: process.env.REACT_API_URL || "http://env-1613447.user.cloudjkt01.com",
+      method: "POST",
+      url:`/pemilih`,
+      data: {
+        "Name": profile.name,
+        "Email": profile.email,
+        "Nim": database.Nim,
+        "Niu": database.Niu,
+        "Jurusan": database.Jurusan,
+        "paslon": paslon,
+        "googleId": profile.googleId,
+      },
+      headers:{
+        "Content-Type": "application/json",
+      }
+    })
+    .catch((error) => {
+      if (error.response) {
+        console.log(error.response)
+        console.log(error.response.status)
+        console.log(error.response.headers)
+        }
+    });
+
     setTimeout(() => {
         setIsLoading(false);
         return navigate("/terimakasih");
         }, 2000);
   }
-
+  
   
 
   return (

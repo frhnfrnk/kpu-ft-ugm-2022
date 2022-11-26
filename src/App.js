@@ -11,12 +11,9 @@ import Footer from "./components/Footer/footer";
 import './index.css';
 import GoToTop from "./components/GoToTop/goToTop";
 import Vote from "./pages/Vote";
-import { useContext } from "react";
-import { StateContext } from "./components/Context/context";
 
 function App() {
-  const {profile} = useContext(StateContext)
-  console.log(profile)
+  
 
   return (
       <>

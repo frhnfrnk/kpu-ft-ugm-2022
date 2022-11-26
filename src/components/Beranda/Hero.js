@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { GoogleLogin, GoogleLogout } from 'react-google-login';
+import React, { useEffect, useContext } from 'react';
+import { GoogleLogin } from 'react-google-login';
 import { gapi } from 'gapi-script';
 import { Link, useNavigate } from "react-router-dom";
 import Back_kertas from "../../assets/Hero/Back_kertas.png";
@@ -10,9 +10,9 @@ import { Fade } from "react-reveal";
 
 export default function Hero() {
 
-  const {isCompleted, profile, setProfile, clientId} = useContext(StateContext)
+  const {isCompleted, profile, setProfile, clientId,isLogin, setIsLogin, isChoose} = useContext(StateContext)
   let navigate = useNavigate();
-
+  
   useEffect(() => {
     const initClient = () => {
           gapi.auth2.init({
@@ -23,9 +23,23 @@ export default function Hero() {
      gapi.load('client:auth2', initClient);
   });
 
+  // useEffect(() => {
+  //   if (isLogin) {
+
+  function login(){
+    setIsLogin(true)
+    if(!isChoose){
+      navigate('/vote')
+    }
+    else{
+      navigate('/terimakasih')
+    }
+  }
+
+
   const onSuccess = (res) => {
     setProfile(res.profileObj);
-    return navigate("/vote");
+    login()
   };
   const onFailure = (err) => {
     console.log('failed:', err);
@@ -64,13 +78,13 @@ export default function Hero() {
                               isSignedIn={true}
                           />
                     : 
-                    <button href="#" className="bg-gradient-to-r from-[#959595] to-[#959595] text-[#FFFFFF] rounded-full px-6 py-2 font-semibold shadow-[0px_4px_10px_rgba(55,18,18,0.25)] cursor-default">Vote Ditutup</button>
+                    <button href="#" className="bg-gradient-to-r from-[#959595] to-[#959595] text-[#FFFFFF] lg:text-[16px] text-[14px] rounded-full px-6 py-2 font-semibold shadow-[0px_4px_10px_rgba(55,18,18,0.25)] cursor-default">Vote Ditutup</button>
                     }
 
                     
                     
 
-                    <Link to="/info-calon"><button  className="border-[#A05252] hover:border-[#9D7E57] active:border-[#7E6546] border-2 rounded-full px-7 py-1.5 text-[#A05252] font-semibold ">Lihat Calon</button></Link>
+                    <Link to="/info-calon"><button  className="border-[#A05252] hover:border-[#9D7E57] lg:text-[16px] text-[14px] active:border-[#7E6546] border-2 rounded-full px-7 py-1.5 text-[#A05252] font-semibold ">Lihat Calon</button></Link>
                   </div>         
                 </div>
               </Fade>

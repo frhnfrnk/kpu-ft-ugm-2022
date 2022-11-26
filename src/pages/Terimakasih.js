@@ -27,7 +27,7 @@ function Terimakasih() {
       </Helmet>
       <div className="w-full h-[100vh] bg-cover bg-no-repeat bg-[#E1DAD1] flex flex-col justify-center items-center"
         style={{ backgroundImage: "url(" + bg + ")" }}>
-          <Fade top>
+          <Fade right>
             <div>
               <h1 className="text-center font-Playfair font-bold text-[calc(0.5rem+5vmin)] lg:text-[calc(0.5rem+3vmin)] text-[#2A374A]">Terima Kasih Atas<br/>Partisipasi Anda Dalam</h1>
             </div>
@@ -37,7 +37,7 @@ function Terimakasih() {
               <img src={logoCircle} alt="logoCircle" className="w-[40%] lg:w-[25%]"/>
             </div>
           </Zoom>
-          <Fade bottom>
+          <Fade left>
             <div>
               <h1 className="font-Lato text-[#2A374A] text-center font-bold lg:font-medium text-[calc(0.5rem+5vmin)] lg:text-[calc(1rem+3vmin)]">PEMILU FT UGM 2022</h1>
             </div>

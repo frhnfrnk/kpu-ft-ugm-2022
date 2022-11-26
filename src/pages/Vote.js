@@ -7,14 +7,14 @@ import { useState } from "react";
 import { useContext } from "react";
 import { StateContext } from "../components/Context/context";
 import {Helmet} from "react-helmet";
-import { Navigate, redirect, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {Fade, Zoom} from 'react-reveal';
 import axios from "axios";
 import { useEffect } from "react";
 
 
 export default function Vote() {
-  const {profile} = useContext(StateContext)
+  const {profile, setIsChoose , isRegistered} = useContext(StateContext)
   const [database, setDatabase]= useState({})  
 
   useEffect(() => {
@@ -95,6 +95,7 @@ export default function Vote() {
 
     setTimeout(() => {
         setIsLoading(false);
+        setIsChoose(true);
         return navigate("/terimakasih");
         }, 2000);
   }
@@ -108,33 +109,45 @@ export default function Vote() {
         </Helmet>
       {/*Calon Section Start*/}
         <div className="bg-[#E1DAD1] h-full">
-          <div className="bg-cover bg-center w-full h-[120vh] bg-no-repeat flex flex-col content-center " style={{ backgroundImage: "url(" + Backbaru2 + ")" }}>          
+          {isRegistered ? 
+            <div className="bg-cover bg-center w-full h-[120vh] bg-no-repeat flex flex-col content-center " style={{ backgroundImage: "url(" + Backbaru2 + ")" }}>          
             <Fade top>
-              <div className="text-center mt-[16vh] h-auto text-[#2A374A] mx-auto">
-                <p className="font-Lato text-[12px] md:text-[20px]" >Anda masuk sebagai <span className="font-bold text-[rgba(138,45,45,1)]">{profile.email}</span></p>
-                <h1 className="font-Playfair-bold text-[28px] md:text-[50px]">CALON KETUA BEM KMFT UGM 2023</h1>
-                <p className="font-Lato text-[18px] md:text-[20px]">Klik Calon Ketua Pilihanmu!</p>
-              </div>
-            </Fade>
-            <div  className="card flex flex-col lg:flex-row justify-center items-center lg:justify-around w-[60%] h-[60%] lg:h-[40%] mx-auto mt-[10vmin] lg:mt-[6vmin] mb-[8rem] lg:mb-0"  >
-              <Fade left>
-                <div id="Calon Ketua No Urut 0" className="w-full lg:w-1/2 flex flex-col justify-center items-center cursor-pointer group transition-all  lg:pr-[5%]" onClick={handleClick}> 
-                    <img src={Frame_Calon2} className="w-full md:w-[85%]" alt="calon_2"/>
-                    <div className="transition-all text-center w-[80%] md:w-[320px] mt-[-4.6rem] md:mt-[-8.3rem] lg:mt-0 bg-[rgba(138,45,45,0.85)] py-[8px] md:py-[12px] block text-[#E8E4E3] text-[14px] md:text-[25px] rounded-[8px] lg:rounded-[20px] font-Playfair-semibold mx-auto lg:-translate-y-[7.3rem] group-hover:bg-[#E1DAD1] group-hover:text-[#8A2D2D]">
-                      <h1 className="">Hilmi Naufal Zulfani</h1>
-                    </div>
+                <div className="text-center mt-[16vh] h-auto text-[#2A374A] mx-auto">
+                  <p className="font-Lato text-[12px] md:text-[20px]" >Anda masuk sebagai <span className="font-bold text-[rgba(138,45,45,1)]">{profile.email}</span></p>
+                  <h1 className="font-Playfair-bold text-[28px] md:text-[50px]">CALON KETUA BEM KMFT UGM 2023</h1>
+                  <p className="font-Lato text-[18px] md:text-[20px]">Klik Calon Ketua Pilihanmu!</p>
                 </div>
               </Fade>
-              <Fade right>
-                <div id="Calon Ketua No Urut 1" className="card w-full lg:w-1/2 flex flex-col justify-center items-center cursor-pointer group transition-all  lg:pl-[5%]" onClick={handleClick}> 
-                  <img src={Frame_Calon}  className="w-full md:w-[85%]" alt="calon_1"/>
-                  <div className="transition-all text-center w-[80%] md:w-[320px] mt-[-4.6rem] md:mt-[-8.3rem] lg:mt-0 bg-[rgba(138,45,45,0.85)] py-[8px] md:py-[12px] block text-[#E8E4E3] text-[14px] md:text-[25px] rounded-[8px] lg:rounded-[20px] font-Playfair-semibold mx-auto lg:-translate-y-[7.3rem] group-hover:bg-[#E1DAD1] group-hover:text-[#8A2D2D]">
-                    <h1 className="">Ariel Excelsio T.S</h1>
+              <div  className="card flex flex-col lg:flex-row justify-center items-center lg:justify-around w-[60%] h-[60%] lg:h-[40%] mx-auto mt-[10vmin] lg:mt-[6vmin] mb-[8rem] lg:mb-0"  >
+                <Fade left>
+                  <div id="Calon Ketua No Urut 1" className="w-full lg:w-1/2 flex flex-col justify-center items-center cursor-pointer group transition-all  lg:pr-[5%]" onClick={handleClick}> 
+                      <img src={Frame_Calon2} className="w-full md:w-[85%]" alt="calon_2"/>
+                      <div className="transition-all text-center w-[80%] md:w-[320px] mt-[-4.6rem] md:mt-[-8.3rem] lg:mt-0 bg-[rgba(138,45,45,0.85)] py-[8px] md:py-[12px] block text-[#E8E4E3] text-[14px] md:text-[25px] rounded-[8px] lg:rounded-[20px] font-Playfair-semibold mx-auto lg:-translate-y-[7.3rem] group-hover:bg-[#E1DAD1] group-hover:text-[#8A2D2D]">
+                        <h1 className="">Hilmi Naufal Zulfani</h1>
+                      </div>
                   </div>
-                </div>
-              </Fade>  
-            </div>
-          </div>  
+                </Fade>
+                <Fade right>
+                  <div id="Calon Ketua No Urut 2" className="card w-full lg:w-1/2 flex flex-col justify-center items-center cursor-pointer group transition-all  lg:pl-[5%]" onClick={handleClick}> 
+                    <img src={Frame_Calon}  className="w-full md:w-[85%]" alt="calon_1"/>
+                    <div className="transition-all text-center w-[80%] md:w-[320px] mt-[-4.6rem] md:mt-[-8.3rem] lg:mt-0 bg-[rgba(138,45,45,0.85)] py-[8px] md:py-[12px] block text-[#E8E4E3] text-[14px] md:text-[25px] rounded-[8px] lg:rounded-[20px] font-Playfair-semibold mx-auto lg:-translate-y-[7.3rem] group-hover:bg-[#E1DAD1] group-hover:text-[#8A2D2D]">
+                      <h1 className="">Ariel Excelsio T.S</h1>
+                    </div>
+                  </div>
+                </Fade>  
+              </div>
+          </div> 
+          :
+          <div className="bg-cover bg-center w-full h-[100vh] bg-no-repeat flex flex-col justify-center " style={{ backgroundImage: "url(" + Backbaru2 + ")" }}>
+            <Fade top>
+              <div id="notRegistered" className={`flex flex-col justify-center items-center font-Lato font-bold text-[30px] text-[#8A2D2D]`}>
+                Email Anda Tidak Terdaftar!
+                <button className="
+                h-[auto] w-1/8 py-[8px] px-[30px] text-white font-bold font-Lato text-[16px] rounded-full mt-[40px] lg:mt-[20px] bg-gradient-to-r from-[#8A2D2D] to-[#6E2424] shadow-[0px_4px_5px_rgba(110,36,36,0.1),0px_4px_10px_rgba(55,18,18,0.25)] hover:bg-gradient-to-r hover:from-[#E1DAD1] hover:to-[#E1DAD1] hover:text-[#8A2D2D] hover:shadow-[0px_7px_20px_rgba(110,36,36,0.15),0px_10px_25px_1px_rgba(55,18,18,0.45)] transition-all active:bg-gradient-to-r active:from-[#BFB196] active:to-[#BFB196] active:shadow-[0px_7px_20px_rgba(110,36,36,0.15),0px_10px_25px_1px_rgba(55,18,18,0.45)] active:border-none
+                "><a className="w-[50%] h-full" href="https://docs.google.com/forms/d/e/1FAIpQLSd5c1FdhkcMJknOfLnZku-lQyQymaQ3hiAFl5qOzHndDa0P2Q/viewform">Daftar Sekarang</a></button>
+              </div>
+            </Fade>
+          </div>} 
           <div className="h-[80vh] flex justify-center items-center mb-[10vh]">
             <Zoom>
               <img src={Hiasan_choose} alt="hiasan" className=""/>

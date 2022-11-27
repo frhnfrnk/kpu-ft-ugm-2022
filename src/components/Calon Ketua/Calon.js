@@ -81,7 +81,7 @@ export default function Calon() {
             <div className="popup-inner py-[10px] w-[95%] h-[95%] flex justify-center items-center border-[#8A2D2D] border-[2px] lg:border-[6px] rounded-[16px] lg:rounded-[40px]">
                 <div className="flex flex-col py-[20px] px-[25px] popup-inner2 w-[95%] h-[95%] flex justify-center items-center border-[#8A2D2D] border-[2px] lg:border-[6px] rounded-[10px] lg:rounded-[40px]">
               {/* Make a close btn */}
-              <div className="close-btn absolute top-0 right-0 mt-[70px] mr-[50px] md:mt-[100px] md:mr-[100px]" onClick={() => {setIsOpen1(false)}}>
+              <div className="close-btn absolute top-0 right-0 mt-[70px] mr-[50px] lg:mt-[100px] lg:mr-[100px]" onClick={() => {setIsOpen1(false)}}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#8A2D2D" stroke="#8A2D2D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-x cursor-pointer hover:text-white">
                   <line x1="18" y1="6" x2="6" y2="18"></line>
                   <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -92,32 +92,32 @@ export default function Calon() {
                 <div className="w-full lg:w-[30%] p-6 flex justify-center">
                   <img src={Frame_Calon2} className="w-[60%] lg:w-[100%]"  alt="calon_1"/>
                 </div>
-                <div className="w-full md:w-[70%] py-3">
-                  <h1 className="font-Playfair-bold text-[14px] lg:text-[40px] text-[#35455D]">Hilmi Naufal Zulfani</h1>
-                  <h3 className="font-Lato text-[24px] text-[#35455D]">Departemen Teknik Kimia</h3>
-                  <h3 className="font-Playfair-bold text-[24px] text-[#35455D] mt-[20px]">Profil</h3>
-                  <p className="text-[#151C25] text-[18px] font-Lato indent-8">Teknik atau engineering memiliki arti rekayasa. Tentu rekayasa di sini adalah upaya untuk merancang sesuatu yang bernilai positif dan bermanfaat bagi kehidupan manusia. Begitu juga dengan mahasiswanya yang merupakan para calon insinyur pembangun dan pelopor bangsa. Paradigma yang menjadikan seluruh csivitas atau warga menjadi seseorang yang pemikir, solid, dan disiplin, tetapi tetap peduli dan menyenangkan karena untuk Teknik jelas “No Party, No Happy”.</p>
+                <div className="w-full lg:w-[70%] py-0 lg:py-3">
+                  <h1 className="font-Playfair-bold text-[16px] text-center lg:text-[40px] text-[#35455D]">Hilmi Naufal Zulfani</h1>
+                  <h3 className="font-Lato text-center text-[14px] lg:text-[24px] text-[#35455D]">Departemen Teknik Kimia</h3>
+                  <h3 className="font-Playfair-bold text-[14px] lg:text-[24px] text-[#35455D] mt-[20px]">Profil</h3>
+                  <p className="text-[#151C25] text-[12px] lg:text-[18px] font-Lato indent-8 text-justify">Teknik atau engineering memiliki arti rekayasa. Tentu rekayasa di sini adalah upaya untuk merancang sesuatu yang bernilai positif dan bermanfaat bagi kehidupan manusia. Begitu juga dengan mahasiswanya yang merupakan para calon insinyur pembangun dan pelopor bangsa. Paradigma yang menjadikan seluruh csivitas atau warga menjadi seseorang yang pemikir, solid, dan disiplin, tetapi tetap peduli dan menyenangkan karena untuk Teknik jelas “No Party, No Happy”.</p>
                 </div>
               </div>
               <div>
-                <p className="text-[#151C25] text-[18px] font-Lato indent-8">Badan Eksekutif Mahasiswa KMFT UGM merupakan sebuah lembaga mahasiswa di KMFT UGM yang memiliki peranan eksekutif untuk bisa menjalankan fungsi inisiator dan inklusi seluruh kekuatan kreatif mahasiswa secara terpadu dan selaras. Agar dapat melaksanakannya, tentu kita harus berpikir secara mendasar dan bertanya, “Mengapa BEM KMFT UGM ada dan dibutuhkan?” serta “Apa masalah utama dan menjadi prioritas di KMFT serta bagaimana cara menyeleaikannya?” Terdapat beberapa permasalahan yang sangat menjadi perhatian kita semua, baik dari sudut pandang lembaga maupun mahasiswa. Contohnya adalah rasa kepemilikan fungsionaris terhadap organisasi dan apa yang organisasi bisa berikat kepada para fungsionarisnya; manajemen keuangan lembaga; persebaran dan dan efektivitas program yang akan berpengaruh terhadap stabilitas kinerja; berbagai macam isu kemahasiswaan, keteknikan, dan nasional yang dinamis dan fluktuatif; isu sinergitas, kemitraan, dan keterlibatan seluruh elemen; responsibilitas program; transparansi dan komunikasi antar bidang dan lembaga; iklim pergerakan dan pengabdian di teknik; serta pengembangan kreativitas akademik dan minat bakat mahasiswa. Oleh karena itu, dibutuhkan sistem yang mampu menaungi berbagai macam aspirasi dan dan tanggap kritis terhadap fluktuasi yang ada.</p>
+                <p className="text-[#151C25] text-[12px] lg:text-[18px] text-justify font-Lato indent-8">Badan Eksekutif Mahasiswa KMFT UGM merupakan sebuah lembaga mahasiswa di KMFT UGM yang memiliki peranan eksekutif untuk bisa menjalankan fungsi inisiator dan inklusi seluruh kekuatan kreatif mahasiswa secara terpadu dan selaras. Agar dapat melaksanakannya, tentu kita harus berpikir secara mendasar dan bertanya, “Mengapa BEM KMFT UGM ada dan dibutuhkan?” serta “Apa masalah utama dan menjadi prioritas di KMFT serta bagaimana cara menyeleaikannya?” Terdapat beberapa permasalahan yang sangat menjadi perhatian kita semua, baik dari sudut pandang lembaga maupun mahasiswa. Contohnya adalah rasa kepemilikan fungsionaris terhadap organisasi dan apa yang organisasi bisa berikat kepada para fungsionarisnya; manajemen keuangan lembaga; persebaran dan dan efektivitas program yang akan berpengaruh terhadap stabilitas kinerja; berbagai macam isu kemahasiswaan, keteknikan, dan nasional yang dinamis dan fluktuatif; isu sinergitas, kemitraan, dan keterlibatan seluruh elemen; responsibilitas program; transparansi dan komunikasi antar bidang dan lembaga; iklim pergerakan dan pengabdian di teknik; serta pengembangan kreativitas akademik dan minat bakat mahasiswa. Oleh karena itu, dibutuhkan sistem yang mampu menaungi berbagai macam aspirasi dan dan tanggap kritis terhadap fluktuasi yang ada.</p>
               </div>
               <div>
-                <h3 className="font-Playfair-bold text-[24px] text-[#35455D] mt-[20px]">Visi</h3>
-                <p className="text-[#151C25] text-[18px] font-Lato">BEM KMFT UGM sebagai lembaga penghimpun dan penggerak kolaborasi mahasiswa teknik yang berkelanjutan dan tepat guna.</p>
+                <h3 className="font-Playfair-bold text-[14px] lg:text-[24px] text-[#35455D] mt-[20px]">Visi</h3>
+                <p className="text-[#151C25] text-[12px] lg:text-[18px] font-Lato">BEM KMFT UGM sebagai lembaga penghimpun dan penggerak kolaborasi mahasiswa teknik yang berkelanjutan dan tepat guna.</p>
               </div>
               <div>
-                <h3 className="font-Playfair-bold text-[24px] text-[#35455D] mt-[20px]">Misi</h3>
-                <ul className="list-decimal px-[20px]">
-                  <li className="text-[#151C25] text-[18px] font-Lato">Membangun konstruksi internal organisasi yang kolaboratif, sistemik, dan terarah berdasarkan prinsip kesempatan.</li>
-                  <li className="text-[#151C25] text-[18px] font-Lato">Membentuk ekosistem program kemahasiswaan yang responsif dan substantif melalui kemitraan forum dan kelembagaan.</li>
-                  <li className="text-[#151C25] text-[18px] font-Lato">Menghadirkan pola pergerakan dan pengabdian yang aplikatif serta kritis terhadap isu sosial, politik, dan lingkungan.</li>
-                  <li className="text-[#151C25] text-[18px] font-Lato">Menyediakan ruang kreasi, pengembangan minat, dan kompetensi mahasiswa sesuai kebutuhan, terpadu, dan adaptif.</li>
-                  <li className="text-[#151C25] text-[18px] font-Lato">Mengoptimalkan fungsi media riset dan komunikasi dengan mekanisme cepat tanggap, transparan, dan terintegrasi.</li>
+                <h3 className="font-Playfair-bold text-[14px] lg:text-[24px] text-[#35455D] mt-[20px]">Misi</h3>
+                <ul className="list-decimal px-[20px] text-[12px] lg:text-[18px] text-[#151C25] font-Lato text-justify">
+                  <li>Membangun konstruksi internal organisasi yang kolaboratif, sistemik, dan terarah berdasarkan prinsip kesempatan.</li>
+                  <li>Membentuk ekosistem program kemahasiswaan yang responsif dan substantif melalui kemitraan forum dan kelembagaan.</li>
+                  <li>Menghadirkan pola pergerakan dan pengabdian yang aplikatif serta kritis terhadap isu sosial, politik, dan lingkungan.</li>
+                  <li>Menyediakan ruang kreasi, pengembangan minat, dan kompetensi mahasiswa sesuai kebutuhan, terpadu, dan adaptif.</li>
+                  <li>Mengoptimalkan fungsi media riset dan komunikasi dengan mekanisme cepat tanggap, transparan, dan terintegrasi.</li>
                 </ul>
               </div>
               <div className="w-full">
-                <h3 className="font-Playfair-bold text-[24px] text-[#35455D] mt-[20px]">Daftar Riwayat Hidup</h3>
+                <h3 className="font-Playfair-bold text-[14px] lg:text-[24px] text-[#35455D] mt-[20px]">Daftar Riwayat Hidup</h3>
                 <iframe className="rounded-[10px] w-[100%] h-[50vh]" src="https://drive.google.com/file/d/11c9aWkvPfFWbGgC_8pUWuxTXgCyiunuR/preview" title="CV Hilmi Naufal"></iframe>
               </div>
             </div>

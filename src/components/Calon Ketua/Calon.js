@@ -102,11 +102,11 @@ export default function Calon() {
               <div>
                 <p className="text-[#151C25] text-[12px] lg:text-[18px] text-justify font-Lato indent-8">Badan Eksekutif Mahasiswa KMFT UGM merupakan sebuah lembaga mahasiswa di KMFT UGM yang memiliki peranan eksekutif untuk bisa menjalankan fungsi inisiator dan inklusi seluruh kekuatan kreatif mahasiswa secara terpadu dan selaras. Agar dapat melaksanakannya, tentu kita harus berpikir secara mendasar dan bertanya, “Mengapa BEM KMFT UGM ada dan dibutuhkan?” serta “Apa masalah utama dan menjadi prioritas di KMFT serta bagaimana cara menyeleaikannya?” Terdapat beberapa permasalahan yang sangat menjadi perhatian kita semua, baik dari sudut pandang lembaga maupun mahasiswa. Contohnya adalah rasa kepemilikan fungsionaris terhadap organisasi dan apa yang organisasi bisa berikat kepada para fungsionarisnya; manajemen keuangan lembaga; persebaran dan dan efektivitas program yang akan berpengaruh terhadap stabilitas kinerja; berbagai macam isu kemahasiswaan, keteknikan, dan nasional yang dinamis dan fluktuatif; isu sinergitas, kemitraan, dan keterlibatan seluruh elemen; responsibilitas program; transparansi dan komunikasi antar bidang dan lembaga; iklim pergerakan dan pengabdian di teknik; serta pengembangan kreativitas akademik dan minat bakat mahasiswa. Oleh karena itu, dibutuhkan sistem yang mampu menaungi berbagai macam aspirasi dan dan tanggap kritis terhadap fluktuasi yang ada.</p>
               </div>
-              <div>
+              <div className="w-full">
                 <h3 className="font-Playfair-bold text-[14px] lg:text-[24px] text-[#35455D] mt-[20px]">Visi</h3>
                 <p className="text-[#151C25] text-[12px] lg:text-[18px] font-Lato">BEM KMFT UGM sebagai lembaga penghimpun dan penggerak kolaborasi mahasiswa teknik yang berkelanjutan dan tepat guna.</p>
               </div>
-              <div>
+              <div className="w-full">
                 <h3 className="font-Playfair-bold text-[14px] lg:text-[24px] text-[#35455D] mt-[20px]">Misi</h3>
                 <ul className="list-decimal px-[20px] text-[12px] lg:text-[18px] text-[#151C25] font-Lato text-justify">
                   <li>Membangun konstruksi internal organisasi yang kolaboratif, sistemik, dan terarah berdasarkan prinsip kesempatan.</li>

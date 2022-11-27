@@ -21,7 +21,7 @@ export default function Vote() {
     axios({
       baseURL: process.env.REACT_API_URL || "https://env-1613447.user.cloudjkt01.com",
       method: "GET",
-      url:`/users/${profile.email}`,
+      url:`/users/email/${profile.email}`,
     })
     .then((response) => {
       setDatabase(response.data);

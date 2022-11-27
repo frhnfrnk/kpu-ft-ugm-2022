@@ -15,7 +15,7 @@ import { GoogleLogout } from "react-google-login";
 
 
 export default function Vote() {
-  const {profile, setIsChoose , isRegistered, clientId, setProfile, isDPT} = useContext(StateContext)
+  const {profile, setIsChoose ,clientId, setProfile, isDPT} = useContext(StateContext)
   const [database, setDatabase]= useState({})  
 
   useEffect(() => {

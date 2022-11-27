@@ -11,7 +11,7 @@ import {Fade, Zoom} from 'react-reveal'
 
 function Terimakasih() {
 
-  const {isCompleted, profile, setProfile, clientId} = useContext(StateContext)
+  const {setProfile, clientId} = useContext(StateContext)
   let navigate = useNavigate()
 
 

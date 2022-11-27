@@ -38,8 +38,7 @@ export default function Footer(props){
                     <div className="h-full lg:pt-[45px] lg:w-[25%]">
                         <h3 className={titleStyle}>Kontak</h3>
                         <ul className={unorderedListStyle}>
-                            <li className={listStyle}>02193129831</li>
-                            <li className={listStyle}>kpuft@gmail.com</li>
+                            <li className={listStyle}>ugmkpuft@gmail.com</li>
                         </ul>
                     </div>
                     <div className="h-full lg:pt-[45px] lg:w-[25%]">

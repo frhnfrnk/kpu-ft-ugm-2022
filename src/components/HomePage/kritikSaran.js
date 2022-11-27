@@ -1,55 +1,9 @@
-import Button from "../Button/button";
 import bgBottom from "../../assets/decoration/bgBottom.png";
 import lineFooter from "../../assets/decoration/line_bottom.png";
-import { useState } from "react";
 
 
 function Kritik(){
-//     const [formData, setFormData] = useState({})
 
-//   //Import environmental varialbles
-//     const {
-//         REACT_APP_PRIVATE_KEY,
-//         REACT_APP_CLIENT_EMAIL,
-//         REACT_APP_SPREADSHEET_ID,
-//         REACT_APP_SHEET_ID
-//     } = process.env
-
-//     //creating new object of google spreadsheet
-//     const doc = new GoogleSpreadsheet(REACT_APP_SPREADSHEET_ID);
-
-//     //Function append spreadsheet to add row into google sheet
-
-//     const appendSpreadsheet = async (row) => {
-//         console.log(REACT_APP_CLIENT_EMAIL);
-//         try {
-//         await doc.useServiceAccountAuth({
-//             client_email: REACT_APP_CLIENT_EMAIL,
-//             private_key: REACT_APP_PRIVATE_KEY,
-//         });
-//         await doc.loadInfo();
-//         console.log(doc.loadInfo());
-//         const sheet = doc.sheetsById[REACT_APP_SHEET_ID];
-//         const result = await sheet.addRow(row);
-//         return result;
-//         } catch (e) {
-//         console.error("Error: ", e);
-//         }
-//     };
-
-
-
-//     const handleInputChange = (event) => {
-//         setFormData({
-//             ...formData,
-//             [event.target.name]: event.target.value
-//         })
-//     }
-//     const handleSubmit = (event) => {
-//         event.preventDefault()
-//         appendSpreadsheet(formData)
-//     }
-    
 
     return(
         <div>

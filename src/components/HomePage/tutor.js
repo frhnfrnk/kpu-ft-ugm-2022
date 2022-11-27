@@ -1,4 +1,3 @@
-import Frame from '../../assets/decoration/frametutor.png'
 import TutorCarousel from './tutorialCarousel';
 import Fade from 'react-reveal/Fade';
 

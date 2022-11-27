@@ -14,7 +14,6 @@ function CekStatus() {
   const [database, setDatabase] = useState({});
 
   const [notRegistered, setNotRegistered] = useState("hidden");
-  const result = document.getElementById("result");
 
   const handleChange = (event) => {
     setIsRegistered(false)
@@ -30,6 +29,7 @@ function CekStatus() {
         })
         .then((response) => {
           setDatabase(response.data);
+          console.log(database)
           if(response.data.Email === undefined) {
             setIsRegistered(false);
             setNotRegistered("block")
@@ -59,7 +59,7 @@ function CekStatus() {
             <h1 className="text-[#2A374A] font-Playfair-bold text-4xl lg:text-5xl">Cek Status</h1>
             <p className="text-[#2A374A] font-Lato text-xl lg:text-2xl">Daftar Pemilihan Sementara</p>
             <form className="flex flex-col w-full md:flex-row justify-center items-center space-x-0 space-y-4 md:space-y-0 md:space-x-4 pt-4">
-              <input onChange={handleChange} className="w-full font-Lato placeholder:text-[#9D7E57] placeholder:text-[14px] pr-0 md:pr-12 pl-3 rounded-3xl bg-[#E8E4E3] border-2 border-solid border-[#9D7E57] py-1.5 hover:placeholder:text-[#8A2D2D] hover:border-[#8A2D2D] focus:placeholder:text-[#35455D] focus:border-[#35455D] shadow-[0px_7px_20px_rgba(110,36,36,0.15),0px_10px_25px_1px_rgba(55,18,18,0.45)] hover:shadow-[0px_7px_20px_rgba(110,36,36,0.15),0px_10px_25px_1px_rgba(55,18,18,0.45)] focus:shadow-[0px_7px_20px_rgba(110,36,36,0.15),0px_10px_25px_1px_rgba(55,18,18,0.45)]" placeholder="Ketik Email Anda dengan benar..." type="text" name="NIM"/>
+              <input onChange={handleChange} className="w-full font-Lato placeholder:text-[#9D7E57] placeholder:text-[14px] pr-0 md:pr-12 pl-3 rounded-3xl bg-[#E8E4E3] border-2 border-solid border-[#9D7E57] py-1.5 hover:placeholder:text-[#8A2D2D] hover:border-[#8A2D2D] focus:placeholder:text-[#35455D] focus:border-[#35455D] shadow-[0px_7px_20px_rgba(110,36,36,0.15),0px_10px_25px_1px_rgba(55,18,18,0.45)] hover:shadow-[0px_7px_20px_rgba(110,36,36,0.15),0px_10px_25px_1px_rgba(55,18,18,0.45)] focus:shadow-[0px_7px_20px_rgba(110,36,36,0.15),0px_10px_25px_1px_rgba(55,18,18,0.45)]" placeholder="Masukkan NIU..." type="text" name="NIM"/>
               <button type="submit" onClick={handleSubmit} className="w-[50%] md:w-[50%] my-5 md:my-0 font-Lato bg-gradient-to-r from-[#8A2D2D] to-[#6E2424] hover:bg-gradient-to-r hover:from-[#E1DAD1] hover:to-[#E1DAD1] hover:text-[#8A2D2D] hover:shadow-[0px_7px_20px_rgba(110,36,36,0.15),0px_10px_25px_1px_rgba(55,18,18,0.25)] transition-all active:bg-gradient-to-r active:from-[#BFB196] active:to-[#BFB196] rounded-3xl py-[6px] text-[#FFFFFF] hover:text-[#8A2D2D] active:text-[#8A2D2D] drop-shadow-[0px_4px_5px_rgba(110,36,36,0.1)] hover:drop-shadow-[0px_7px_20px_rgba(110,36,36,0.15)] active:drop-shadow-[0px_7px_20px_rgba(110,36,36,0.15)]">Periksa</button>
             </form>
           </div>
@@ -72,7 +72,7 @@ function CekStatus() {
                 </h3>
                 <div className="text-[#E1DAD1] font-Lato md:text-[20px] text-[14px] flex">
                   <ul>
-                    <li>Nama</li>
+                    <li>Username</li>
                     <li>NIM</li>
                     <li>Prodi</li>
                     <li>Email</li>

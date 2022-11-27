@@ -4,12 +4,13 @@ export const StateContext = createContext()
 
 export const StateProvider = props => {
 
-    const [isCompleted, setIsCompleted] = useState(false)
+    const [isCompleted, setIsCompleted] = useState(true)
     const [isCloseVote, setIsCloseVote] = useState(false)
-    const [profile, setProfile] = useState({})
+    const [profile, setProfile] = useState([])
     const [isLogin, setIsLogin] = useState(false)
     const [isChoose, setIsChoose] = useState(false)
     const [isRegistered, setIsRegistered] = useState(false)
+    const [isDPT, setIsDPT] = useState(false)
     const clientId = '449519521276-2959vrk76er8jcqobo5pjn7q2plvh7ih.apps.googleusercontent.com'
 
     return (
@@ -20,7 +21,8 @@ export const StateProvider = props => {
             clientId,
             isLogin, setIsLogin,
             isChoose, setIsChoose,
-            isRegistered, setIsRegistered
+            isRegistered, setIsRegistered,
+            isDPT, setIsDPT
             }}>
             {props.children}
         </StateContext.Provider>

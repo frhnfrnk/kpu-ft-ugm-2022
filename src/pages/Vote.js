@@ -102,8 +102,7 @@ export default function Vote() {
   }
 
   useEffect(() => {
-
-  }, [profile])
+  }, [profile, database,calon])
 
   const logOut = () => {
     setProfile(null);

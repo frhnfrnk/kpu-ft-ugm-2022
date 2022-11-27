@@ -24,7 +24,7 @@ function CekStatus() {
       e.preventDefault()
       await axios({
         // http://api.kpuftugm.id
-          baseURL: process.env.REACT_API_URL ||  "http://103.185.38.142/",
+          baseURL: process.env.REACT_API_URL ||  "https://103.185.38.142",
           method: "GET",
           url:`/users/${data}`,
         })

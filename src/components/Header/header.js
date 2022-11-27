@@ -64,7 +64,7 @@ export default function Header(){
                 <div className='h-16 flex justify-between px-4 '>
                     <Link to="/" className='flex justify-center items-center'>
                         <div className='flex justify-center items-center'>
-                            <img src={Logo} className="h-9 pr-4"/>
+                            <img src={Logo} alt="Logo" className="h-9 pr-4"/>
                             <h1 className={` text-[#e8e4e3] font-bold  text-md ${isScroll ? "lg:text-[#E1DAD1]" : "lg:text-[#2a374a]"}`}>KPUFT UGM 2022</h1>
                         </div>
                     </Link>
@@ -72,7 +72,7 @@ export default function Header(){
                         onClick={()=>setIsOpen(!isOpen)}  
                         className='hamburger h-5 my-auto flex flex-col justify-around px-5 cursor-pointer transition-all duration-500 lg:hidden'>
                         {
-                            isOpen ? <img src={CloseBtn} /> : <img src={Hamburger} />
+                            isOpen ? <img src={CloseBtn} alt="close_btn" /> : <img src={Hamburger} alt="hamburger" />
                         }
                     </div>
                 </div>

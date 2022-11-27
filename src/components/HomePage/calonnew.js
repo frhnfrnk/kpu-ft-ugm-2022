@@ -20,7 +20,7 @@ function Calonnew(){
                             Pilih Nomor 1
                         </h2>
                         <div className="flex justify-center   ">
-                            <img src="/imgKritik/calonkiri.png" 
+                            <img src="/imgKritik/calonkiri.png" alt="calon"
                             className="w-[75%] md:w-[57vh] lg:grayscale lg:sepia-[0.5] opacity-100 group-hover:opacity-100 duration-500 group-hover:grayscale-0 group-hover:sepia-0 group-hover:duration-700 group-hover:delay-50"/>
                         </div>
                     </div>

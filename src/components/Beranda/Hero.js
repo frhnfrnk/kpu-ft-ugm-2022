@@ -10,7 +10,7 @@ import { Fade } from "react-reveal";
 
 export default function Hero() {
 
-  const {isCompleted, profile, setProfile, clientId,isLogin, setIsLogin, isChoose} = useContext(StateContext)
+  const {isCompleted, setProfile, clientId, setIsLogin, isChoose} = useContext(StateContext)
   let navigate = useNavigate();
   
   useEffect(() => {

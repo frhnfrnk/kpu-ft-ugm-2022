@@ -1,4 +1,4 @@
-import { Routes , Route, BrowserRouter as Router, redirect, useNavigate, Navigate } from "react-router-dom";
+import { Routes , Route, BrowserRouter as Router, Navigate } from "react-router-dom";
 import Beranda from './pages/Beranda';
 import Error from './pages/Error';
 import InfoCalon from './pages/InfoCalon';

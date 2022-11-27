@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.d07649a7.css",
-    "main.js": "/static/js/main.08016e2c.js",
-    "static/js/787.d50ceb7d.chunk.js": "/static/js/787.d50ceb7d.chunk.js",
+    "main.css": "/static/css/main.52313393.css",
+    "main.js": "/static/js/main.9823f945.js",
+    "static/js/496.ddc2056a.chunk.js": "/static/js/496.ddc2056a.chunk.js",
     "static/media/bgBottom.png": "/static/media/bgBottom.ae8325c38c67c7f94732.png",
     "static/media/Back_kertas.png": "/static/media/Back_kertas.74ca80c1433082f323ca.png",
     "static/media/backbaru2.png": "/static/media/backbaru2.a3e68ffe1c3002b61022.png",
@@ -35,12 +35,12 @@
     "index.html": "/index.html",
     "static/media/Harmburger.svg": "/static/media/Harmburger.fd6fb50a9cfeaae4d07da88197103d7a.svg",
     "static/media/close.svg": "/static/media/close.a6c6623ae64353cdfe998432690b6a2e.svg",
-    "main.d07649a7.css.map": "/static/css/main.d07649a7.css.map",
-    "main.08016e2c.js.map": "/static/js/main.08016e2c.js.map",
-    "787.d50ceb7d.chunk.js.map": "/static/js/787.d50ceb7d.chunk.js.map"
+    "main.52313393.css.map": "/static/css/main.52313393.css.map",
+    "main.9823f945.js.map": "/static/js/main.9823f945.js.map",
+    "496.ddc2056a.chunk.js.map": "/static/js/496.ddc2056a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d07649a7.css",
-    "static/js/main.08016e2c.js"
+    "static/css/main.52313393.css",
+    "static/js/main.9823f945.js"
   ]
 }

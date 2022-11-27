@@ -23,7 +23,7 @@ function CekStatus() {
   const handleSubmit = async (e) => {
       e.preventDefault()
       await axios({
-          baseURL: process.env.REACT_API_URL || "http://env-1613447.user.cloudjkt01.com",
+          baseURL: process.env.REACT_API_URL || "https://api.kpuftugm.id",
           method: "GET",
           url:`/users/${data}`,
         })

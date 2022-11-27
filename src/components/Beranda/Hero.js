@@ -6,11 +6,12 @@ import Back_kertas from "../../assets/Hero/Back_kertas.png";
 import Hiasan_wow from "../../assets/Hero/Hiasan_wow.png";
 import { StateContext } from "../Context/context";
 import { Fade } from "react-reveal";
+import axios from 'axios';
 
 
 export default function Hero() {
 
-  const {isCompleted, setProfile, clientId, setIsLogin, isChoose} = useContext(StateContext)
+  const {isCompleted, setProfile, profile, clientId, setIsLogin, isChoose, isDPT, setIsDPT} = useContext(StateContext)
   let navigate = useNavigate();
   
   useEffect(() => {
@@ -27,7 +28,29 @@ export default function Hero() {
   //   if (isLogin) {
 
   function login(){
-    setIsLogin(true)
+     axios({
+      baseURL: process.env.REACT_API_URL || "https://env-1613447.user.cloudjkt01.com",
+      method: "GET",
+      url:`/users/email/${profile.email}`,
+    })
+    .then((response) => {
+      setIsLogin(true)
+      if(response.data.Email === undefined) {
+        setIsDPT(false)
+      }
+      else{
+        setIsDPT(true)
+      }
+
+    })
+    .catch((error) => {
+      if (error.response) {
+        console.log(error.response)
+        console.log(error.response.status)
+        console.log(error.response.headers)
+        }
+    });
+
     if(!isChoose){
       navigate('/vote')
     }
@@ -36,6 +59,9 @@ export default function Hero() {
     }
   }
 
+  useEffect(() => {
+      
+  }, [profile, isDPT]);
 
   const onSuccess = (res) => {
     setProfile(res.profileObj);

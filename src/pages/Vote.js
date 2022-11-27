@@ -11,10 +11,11 @@ import { useNavigate } from "react-router-dom";
 import {Fade, Zoom} from 'react-reveal';
 import axios from "axios";
 import { useEffect } from "react";
+import { GoogleLogout } from "react-google-login";
 
 
 export default function Vote() {
-  const {profile, setIsChoose , isRegistered} = useContext(StateContext)
+  const {profile, setIsChoose , isRegistered, clientId, setProfile, isDPT} = useContext(StateContext)
   const [database, setDatabase]= useState({})  
 
   useEffect(() => {
@@ -99,7 +100,15 @@ export default function Vote() {
         return navigate("/terimakasih");
         }, 2000);
   }
-  
+
+  useEffect(() => {
+
+  }, [profile])
+
+  const logOut = () => {
+    setProfile(null);
+    return navigate('/')
+  };
   
 
   return (
@@ -109,7 +118,7 @@ export default function Vote() {
         </Helmet>
       {/*Calon Section Start*/}
         <div className="bg-[#E1DAD1] h-full">
-          {isRegistered ? 
+          {isDPT ? 
             <div className="bg-cover bg-center w-full h-[120vh] bg-no-repeat flex flex-col content-center " style={{ backgroundImage: "url(" + Backbaru2 + ")" }}>          
             <Fade top>
                 <div className="text-center mt-[16vh] h-auto text-[#2A374A] mx-auto">
@@ -145,6 +154,13 @@ export default function Vote() {
                 <button className="
                 h-[auto] w-1/8 py-[8px] px-[30px] text-white font-bold font-Lato text-[16px] rounded-full mt-[40px] lg:mt-[20px] bg-gradient-to-r from-[#8A2D2D] to-[#6E2424] shadow-[0px_4px_5px_rgba(110,36,36,0.1),0px_4px_10px_rgba(55,18,18,0.25)] hover:bg-gradient-to-r hover:from-[#E1DAD1] hover:to-[#E1DAD1] hover:text-[#8A2D2D] hover:shadow-[0px_7px_20px_rgba(110,36,36,0.15),0px_10px_25px_1px_rgba(55,18,18,0.45)] transition-all active:bg-gradient-to-r active:from-[#BFB196] active:to-[#BFB196] active:shadow-[0px_7px_20px_rgba(110,36,36,0.15),0px_10px_25px_1px_rgba(55,18,18,0.45)] active:border-none
                 "><a className="w-[50%] h-full" href="https://docs.google.com/forms/d/e/1FAIpQLSd5c1FdhkcMJknOfLnZku-lQyQymaQ3hiAFl5qOzHndDa0P2Q/viewform">Daftar Sekarang</a></button>
+                <GoogleLogout 
+                clientId={clientId} 
+                buttonText=""
+                  render={renderProps => (
+                    <button onClick={renderProps.onClick} disabled={renderProps.disabled}  className="border-[#A05252] hover:border-[#9D7E57] active:border-[#7E6546] border-2 rounded-full px-7 py-1.5 text-[#A05252] text-[16px] font-semibold ">Log Out</button>
+                  )}
+                onLogoutSuccess={logOut} />
               </div>
             </Fade>
           </div>} 

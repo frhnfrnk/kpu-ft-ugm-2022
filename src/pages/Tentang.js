@@ -44,7 +44,7 @@ export default function Tentang() {
               </h2>
             </div>
           </Fade>
-          </div>
+        </div>
         <div className="">
           <Fade left>
             <h1 className="text-center sm:text-[18px] lg:text-[30px] font-bold font-Playfair text-[#2A374A]  mb-[5px] leading-[28.8px] lg:leading-[48px] lg:mb-[20px] lg:mt-[50px] ">PEMILU FAKULTAS TEKNIK UGM</h1>

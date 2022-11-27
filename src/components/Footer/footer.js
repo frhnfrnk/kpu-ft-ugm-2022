@@ -45,8 +45,7 @@ export default function Footer(props){
                     <div className="h-full lg:pt-[45px] lg:w-[25%]">
                         <h3 className={titleStyle}>Sosial Media</h3>
                         <ul className={unorderedListStyle}>
-                            <li className={listStyle}>Instagram</li>
-                            <li className={listStyle}>Facebook</li>
+                            <li className={listStyle}><a href="https://www.instagram.com/kpuftugm/" target="_blank">Instagram</a></li>
                         </ul>
                     </div>
                 </div> 

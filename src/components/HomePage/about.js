@@ -14,7 +14,7 @@ function Tentang(){
             <div className="w-[90%] mx-auto flex justify-center items-center lg:pt-[10vh] h-[auto] lg:my-0 md:my-[50px] my-[20px]">
                 <Fade left>
                     <div className="w-[50%] md:w-[60%] flex justify-center">
-                        <img src= "/imgKritik/logokpuft.png" alt="Logo" className=" flex justify-center md:w-[80%] md:h-[75%] h-[50%]"/>
+                        <img src= "/imgKritik/logokpuft.png" alt="Logo" loading="lazy" className=" flex justify-center md:w-[80%] md:h-[75%] h-[50%]"/>
                     </div>
                 </Fade>
                 {/* pt-[8vh] */}

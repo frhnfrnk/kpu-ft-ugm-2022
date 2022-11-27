@@ -1,4 +1,5 @@
 import { Routes , Route, BrowserRouter as Router, Navigate } from "react-router-dom";
+import React from "react";
 import Beranda from './pages/Beranda';
 import Error from './pages/Error';
 import InfoCalon from './pages/InfoCalon';
@@ -13,6 +14,8 @@ import GoToTop from "./components/GoToTop/goToTop";
 import Vote from "./pages/Vote";
 import { useContext } from "react";
 import { StateContext } from "./components/Context/context";
+
+
 
 function App() {
   

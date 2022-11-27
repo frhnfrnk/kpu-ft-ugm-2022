@@ -19,22 +19,22 @@ export default function SplidePanitia() {
 
 
       <SplideSlide>
-        <img src={KETUA} className="mx-auto mt-[20px]" alt="ketua" />
+        <img src={KETUA} className="mx-auto mt-[20px]" loading="lazy" alt="ketua" />
       </SplideSlide>
       <SplideSlide>
-        <img src={ACARA} className="mx-auto mt-[20px]" alt="acara" />
+        <img src={ACARA} className="mx-auto mt-[20px]" alt="acara" loading="lazy" />
       </SplideSlide>
       <SplideSlide>
-        <img src={IT} className="mx-auto mt-[20px]" alt="it" />
+        <img src={IT} className="mx-auto mt-[20px]" alt="it"  loading="lazy"/>
       </SplideSlide>
       <SplideSlide>
-        <img src={MEDPUB} className="mx-auto mt-[20px]" alt="medpub" />
+        <img src={MEDPUB} className="mx-auto mt-[20px]" alt="medpub" loading="lazy"/>
+      </SplideSlide> 
+      <SplideSlide>
+        <img src={KSK} className="mx-auto mt-[20px]" alt="ksk" loading="lazy"/>
       </SplideSlide>
       <SplideSlide>
-        <img src={KSK} className="mx-auto mt-[20px]" alt="ksk" />
-      </SplideSlide>
-      <SplideSlide>
-        <img src={HUMAS} className="mx-auto mt-[20px]" alt="humas" />
+        <img src={HUMAS} className="mx-auto mt-[20px]" alt="humas" loading="lazy"/>
       </SplideSlide>
     </Splide>
   );

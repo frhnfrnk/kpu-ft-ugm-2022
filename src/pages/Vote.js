@@ -19,7 +19,7 @@ export default function Vote() {
 
   useEffect(() => {
     axios({
-      baseURL: process.env.REACT_API_URL || "http://env-1613447.user.cloudjkt01.com",
+      baseURL: process.env.REACT_API_URL || "https://api.kpuftugm.id",
       method: "GET",
       url:`/users/${profile.email}`,
     })
@@ -35,7 +35,7 @@ export default function Vote() {
     });
 
     axios({
-      baseURL: process.env.REACT_API_URL || "http://env-1613447.user.cloudjkt01.com",
+      baseURL: process.env.REACT_API_URL || "https://api.kpuftugm.id",
       method: "POST",
       url:`/auth/login`,
       data: {
@@ -69,7 +69,7 @@ export default function Vote() {
     setIsLoading(true);
     var paslon = calon.charAt(calon.length - 1)
     await axios({
-      baseURL: process.env.REACT_API_URL || "http://env-1613447.user.cloudjkt01.com",
+      baseURL: process.env.REACT_API_URL || "https://api.kpuftugm.id",
       method: "POST",
       url:`/pemilih`,
       data: {

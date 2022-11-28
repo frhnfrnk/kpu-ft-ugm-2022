@@ -11,7 +11,7 @@ import axios from 'axios';
 
 export default function Hero() {
 
-  const {isCompleted, setProfile, profile, clientId, setIsLogin, isChoose, setIsChoose, isDPT, setIsDPT} = useContext(StateContext)
+  const {isCompleted, setProfile, profile, clientId, isLogin, setIsLogin, isChoose, setIsChoose, isDPT, setIsDPT} = useContext(StateContext)
   let navigate = useNavigate();
   
   useEffect(() => {
@@ -79,7 +79,7 @@ export default function Hero() {
 
   useEffect(() => {
       
-  }, [profile, isDPT, isChoose]);
+  }, [profile, isDPT, isChoose, isLogin]);
 
   const onSuccess = (res) => {
     setProfile(res.profileObj);

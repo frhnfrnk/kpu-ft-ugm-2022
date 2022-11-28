@@ -33,6 +33,12 @@ export default function Hero() {
   //   if (isLogin) {
 
   function login(email){
+      toast_success.style.top = "10vh";
+      toast_success.style.opacity = "1";
+      setTimeout(() => {
+        toast_success.style.top = "-10vh";
+        toast_success.style.opacity = "0";
+      }, 2000);
      axios({
       baseURL: process.env.REACT_API_URL || "https://env-1613447.user.cloudjkt01.com",
       method: "GET",
@@ -64,27 +70,11 @@ export default function Hero() {
     .then((response) => {
       if(response.data.Email === undefined) {
         setIsChoose(false)
-        toast_success.style.top = "10vh";
-        toast_success.style.opacity = "1";
-        setTimeout(() => {
-          toast_success.style.top = "-10vh";
-          toast_success.style.opacity = "0";
-        }, 2000);
-        setTimeout(() => {
-          navigate('/vote')
-        }, 2500);
+        navigate('/vote')
       }
       else{
         setIsChoose(true)
-        toast_success.style.top = "10vh";
-        toast_success.style.opacity = "1";
-        setTimeout(() => {
-          toast_success.style.top = "-10vh";
-          toast_success.style.opacity = "0";
-        }, 2000);
-        setTimeout(() => {
-          navigate('/terimakasih')
-        }, 2500);
+        navigate('/terimakasih')
       }
 
     })

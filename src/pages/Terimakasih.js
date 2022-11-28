@@ -27,8 +27,8 @@ function Terimakasih() {
     setTimeout(() => {
       toast_success.style.top = "-10vh";
       toast_success.style.opacity = "0";
-      return navigate('/')
     }, 2000);
+    return navigate('/')
   };
 
   return (

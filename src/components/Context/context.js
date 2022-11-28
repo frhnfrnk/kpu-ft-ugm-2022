@@ -27,6 +27,4 @@ export const StateProvider = props => {
             {props.children}
         </StateContext.Provider>
     )
-
-
 }

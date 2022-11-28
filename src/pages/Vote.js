@@ -22,8 +22,6 @@ export default function Vote() {
   const {profile, setIsChoose ,clientId, setProfile, isDPT} = useContext(StateContext)
   const [database, setDatabase]= useState({})  
 
-  const toast_success = document.getElementById("toast_success");
-  const toast_failed = document.getElementById("toast_failed");
 
   useEffect(() => {
     axios({
@@ -99,21 +97,9 @@ export default function Vote() {
         console.log(error.response.status)
         console.log(error.response.headers)
         }
-      toast_failed.style.top = "10vh";
-      toast_failed.style.opacity = "1";
-      setTimeout(() => {
-      toast_failed.style.top = "-10vh";
-      toast_failed.style.opacity = "0";
-      }, 2000);
     });
 
     setTimeout(() => {
-        toast_success.style.top = "10vh";
-        toast_success.style.opacity = "1";
-        setTimeout(() => {
-          toast_success.style.top = "-10vh";
-          toast_success.style.opacity = "0";
-        }, 2000);
         setIsLoading(false);
         setIsChoose(true);
         return navigate("/terimakasih");
@@ -190,7 +176,7 @@ export default function Vote() {
           <img src={lineFooter} alt="line" className="w-full h-auto"/>
         </div>
 
-        <div id='toast_success' className='absolute w-[500px] h-[48px] top-[-10vh] left-[50%] -ml-[200px] transition-all duration-[1000ms] flex justify-center'>
+        {/* <div id='toast_success' className='absolute w-[500px] h-[48px] top-[-10vh] left-[50%] -ml-[200px] transition-all duration-[1000ms] flex justify-center'>
               <div className='bg-[#355D3B] w-[100%] h-full flex items-center justify-start rounded-[12px] shadow-[0px_10px_25px_1px_rgba(17,52,23,0.3)]'>
                   <img src={CheckSquare} alt = "iconCheck" className='mx-[20px] w-[8%]'/>
                   <p className='font-Lato font-bold text-[#FFFFFF] text-[20px]'>Success :<span className='font-normal'> Your vote is recorded</span></p>
@@ -202,7 +188,7 @@ export default function Vote() {
                   <img src={CheckSquare} alt = "iconCheck" className='mx-[20px] w-[8%]'/>
                   <p className='font-Lato font-bold text-[#FFFFFF] text-[20px]'>Error :<span className='font-normal'> Sorry your vote is Failed</span></p>
               </div>
-        </div>
+        </div> */}
 
         {isOpen === true ? 
         <Zoom>

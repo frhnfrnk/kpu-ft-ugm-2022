@@ -27,11 +27,11 @@ export default function Hero() {
   // useEffect(() => {
   //   if (isLogin) {
 
-  function login(){
+  function login(email){
      axios({
       baseURL: process.env.REACT_API_URL || "https://env-1613447.user.cloudjkt01.com",
       method: "GET",
-      url:`/users/email/${profile.email}`,
+      url:`/users/email/${email}`,
     })
     .then((response) => {
       setIsLogin(true)
@@ -54,7 +54,7 @@ export default function Hero() {
     axios({
       baseURL: process.env.REACT_API_URL || "https://env-1613447.user.cloudjkt01.com",
       method: "GET",
-      url:`/pemilih/${profile.email}`,
+      url:`/pemilih/${email}`,
     })
     .then((response) => {
       setIsLogin(true)
@@ -83,7 +83,7 @@ export default function Hero() {
 
   const onSuccess = (res) => {
     setProfile(res.profileObj);
-    login()
+    login(res.profileObj.email)
   };
   const onFailure = (err) => {
     console.log('failed:', err);

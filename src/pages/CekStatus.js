@@ -65,19 +65,19 @@ function CekStatus() {
           </div>
           {isRegistered ? 
           <Fade top>
-            <div id="result" className="w-[90%] md:w-[45%] mt-[5vh] lg:mt-[10vh] rounded-[12px] lg:rounded-[20px] h-[40vh] md:h-[40vh] bg-[#35455D] flex justify-center items-center">
+            <div id="result" className="w-[90%] md:w-[45%] mt-[5vh] lg:mt-[10vh] rounded-[12px] lg:rounded-[20px] h-[30vh] md:h-[40vh] bg-[#35455D] flex justify-center items-center">
               <div id="confirm" className="w-[97%] h-[97%] lg:h-[90%] border-[3px] rounded-[15px] lg:rounded-[40px] flex flex-col justify-center items-center mx-auto">
-                <h3 className="text-[#E1DAD1] text-[24px] md:text-[30px] mb-[20px]">
+                <h3 className="text-[#E1DAD1] text-[16px] md:text-[30px] mb-[20px]">
                   Email Anda Terdaftar
                 </h3>
-                <div className="text-[#E1DAD1] font-Lato md:text-[20px] text-[14px] flex">
+                <div className="w-[90%] text-[#E1DAD1] font-Lato md:text-[20px] text-[12px] flex justify-center ">
                   <ul>
                     <li>Username</li>
                     <li>NIM</li>
                     <li>Prodi</li>
                     <li>Email</li>
                   </ul>
-                  <ul className="mx-[25px]">
+                  <ul className="mx-[10px] lg:mx-[25px]">
                     <li>:</li>
                     <li>:</li>
                     <li>:</li>

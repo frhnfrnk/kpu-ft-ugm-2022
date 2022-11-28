@@ -4,6 +4,8 @@ import { gapi } from 'gapi-script';
 import { Link, useNavigate } from "react-router-dom";
 import Back_kertas from "../../assets/Hero/Back_kertas.png";
 import Hiasan_wow from "../../assets/Hero/Hiasan_wow.png";
+import iconCheck from "../../assets/ToastMessage/CheckCircle.png";
+import warningCircle from "../../assets/ToastMessage/WarningCircle.png";
 import { StateContext } from "../Context/context";
 import { Fade } from "react-reveal";
 import axios from 'axios';
@@ -11,8 +13,11 @@ import axios from 'axios';
 
 export default function Hero() {
 
-  const {isCompleted, setProfile, profile, clientId, setIsLogin, isChoose, setIsChoose, isDPT, setIsDPT} = useContext(StateContext)
+  const {isCompleted, setProfile, profile, clientId, setIsLogin, isLogin, isChoose, setIsChoose, isDPT, setIsDPT} = useContext(StateContext)
   let navigate = useNavigate();
+
+  const toast_success = document.getElementById("toast_success");
+  const toast_failed = document.getElementById("toast_failed");
   
   useEffect(() => {
     const initClient = () => {
@@ -57,14 +62,17 @@ export default function Hero() {
       url:`/pemilih/${email}`,
     })
     .then((response) => {
-      setIsLogin(true)
       if(response.data.Email === undefined) {
         setIsChoose(false)
-        navigate('/vote')
+        setTimeout(() => {
+          navigate('/vote')
+        }, 2500);
       }
       else{
         setIsChoose(true)
-        navigate('/terimakasih')
+        setTimeout(() => {
+          navigate('/terimakasih')
+        }, 2500);
       }
 
     })
@@ -84,10 +92,24 @@ export default function Hero() {
   const onSuccess = (res) => {
     setProfile(res.profileObj);
     login(res.profileObj.email)
+    toast_success.style.top = "10vh";
+    toast_success.style.opacity = "1";
+    setTimeout(() => {
+      toast_success.style.top = "-10vh";
+      toast_success.style.opacity = "0";
+    }, 2000);
   };
   const onFailure = (err) => {
     console.log('failed:', err);
+    toast_failed.style.top = "10vh";
+    toast_failed.style.opacity = "1";
+    setTimeout(() => {
+      toast_failed.style.top = "-10vh";
+      toast_failed.style.opacity = "0";
+    }, 2000);
   };
+
+
 
   return (
     <>
@@ -126,7 +148,6 @@ export default function Hero() {
                     }
 
                     
-                    
 
                     <Link to="/info-calon"><button  className="border-[#A05252] hover:border-[#9D7E57] lg:text-[16px] text-[14px] active:border-[#7E6546] border-2 rounded-full px-7 py-1.5 text-[#A05252] font-semibold ">Lihat Calon</button></Link>
                   </div>         
@@ -139,6 +160,21 @@ export default function Hero() {
               </Fade>
             </div>
           </div>  
+
+          <div id='toast_success' className='absolute w-[400px] h-[64px] top-[-10vh] left-[50%] -ml-[200px] transition-all duration-[1000ms]'>
+              <div className='bg-[#355D3B] w-full h-full flex items-center justify-center rounded-[12px] shadow-[0px_10px_25px_1px_rgba(17,52,23,0.3)]'>
+                  <img src={iconCheck} alt = "iconCheck"/>
+                  <p className='font-Lato font-bold text-[#FFFFFF] text-[20px]'>Success :<span className='font-normal'> Your login is successfull</span></p>
+              </div>
+          </div>
+
+          <div id='toast_failed' className='absolute w-[400px] h-[64px] top-[-10vh] left-[50%] -ml-[200px] transition-all duration-[1000ms]'>
+              <div className='bg-[#8A2D2D] w-full h-full flex items-center justify-center rounded-[12px] shadow-[0px_10px_25px_1px_rgba(17,52,23,0.3)]'>
+                  <img src={warningCircle} alt = "iconCheck"/>
+                  <p className='font-Lato font-bold text-[#FFFFFF] text-[20px]'>Error :<span className='font-normal'> Your login is Failed</span></p>
+              </div>
+        </div>
+
         </div>
       {/*Hero Section End*/}
     </>

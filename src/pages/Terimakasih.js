@@ -8,16 +8,27 @@ import { StateContext } from "../components/Context/context";
 import { GoogleLogout } from "react-google-login";
 import {Fade, Zoom} from 'react-reveal'
 
+import Check from "../assets/ToastMessage/Check.png";
+import WarningOctagon from "../assets/ToastMessage/WarningOctagon.png";
 
 function Terimakasih() {
 
   const {setProfile, clientId} = useContext(StateContext)
   let navigate = useNavigate()
 
+  const toast_success = document.getElementById("toast_success");
+
+
 
   const logOut = () => {
     setProfile(null);
-    return navigate('/')
+    toast_success.style.top = "10vh";
+    toast_success.style.opacity = "1";
+    setTimeout(() => {
+      toast_success.style.top = "-10vh";
+      toast_success.style.opacity = "0";
+      return navigate('/')
+    }, 2000);
   };
 
   return (
@@ -47,7 +58,7 @@ function Terimakasih() {
           </div> */}
           <div className="flex justify-center items-center space-x-5">
             <Fade left>
-              <Link to="/" className="flex justify-center items-center">
+              <Link to="https://docs.google.com/forms/u/1/d/e/1FAIpQLSf3qNG8v0EON4PKfWrXQcT38a0xxSlYf06r010BLJgL5G32ng/viewform?usp=sf_link" className="flex justify-center items-center">
                 <button className={`h-[auto] w-[auto] py-[8px] px-[30px] text-white font-bold font-Lato text-[16px] rounded-full bg-gradient-to-r from-[#8A2D2D] to-[#6E2424] shadow-[0px_4px_5px_rgba(110,36,36,0.1),0px_4px_10px_rgba(55,18,18,0.25)] hover:bg-gradient-to-r hover:from-[#E1DAD1] hover:to-[#E1DAD1] hover:text-[#8A2D2D] hover:shadow-[0px_7px_20px_rgba(110,36,36,0.15),0px_10px_25px_1px_rgba(55,18,18,0.45)] transition-all active:bg-gradient-to-r active:from-[#BFB196] active:to-[#BFB196] active:shadow-[0px_7px_20px_rgba(110,36,36,0.15),0px_10px_25px_1px_rgba(55,18,18,0.45)] active:border-none`}>Evaluasi</button>
                 </Link>
             </Fade>
@@ -66,6 +77,20 @@ function Terimakasih() {
       <div className="bg-[#E1DAD1]">
         <Kritik />
       </div>
+
+      <div id='toast_success' className='absolute w-[400px] h-[64px] top-[-10vh] left-[50%] -ml-[200px] transition-all duration-[1000ms]'>
+            <div className='bg-[#355D3B] w-full h-full flex items-center justify-center rounded-[12px] shadow-[0px_10px_25px_1px_rgba(17,52,23,0.3)]'>
+                <img src={Check} alt = "iconCheck"/>
+                <p className='font-Lato font-bold text-[#FFFFFF] text-[20px]'>Success :<span className='font-normal'> Your account is logged out</span></p>
+            </div>
+        </div>
+
+        {/* <div id='toast_failed' className='absolute w-[400px] h-[64px] top-[-10vh] left-[50%] -ml-[200px] transition-all duration-[1000ms]'>
+            <div className='bg-[#8A2D2D] w-full h-full flex items-center justify-center rounded-[12px] shadow-[0px_10px_25px_1px_rgba(17,52,23,0.3)]'>
+                <img src={WarningOctagon} alt = "iconCheck"/>
+                <p className='font-Lato font-bold text-[#FFFFFF] text-[20px]'>Error :<span className='font-normal'> Logged out is Failed</span></p>
+            </div>
+      </div> */}
     </>
   );
 }

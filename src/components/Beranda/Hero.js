@@ -125,7 +125,7 @@ export default function Hero() {
           <div className="w-full bg-cover bg-center w-full h-full bg-no-repeat flex justify-center" style={{ backgroundImage: "url(" + Back_kertas + ")" }}>
             <div className="w-[100%] h-[100%] flex flex-col lg:flex-row justify-center items-center mt-[5vh] lg:mt-[-5vh]">
               <Fade left>
-                <div className="w-full h-[40%] lg:w-[50%] flex flex-col lg:text-left justify-center items-center mx-auto pl-[9vw] md:pl-[25%] lg:pl-[9vw]">
+                <div className="w-full h-[40%] lg:w-[50%] mt-0 lg:mt-[-50px] flex flex-col lg:text-left justify-center items-center mx-auto pl-[9vw] md:pl-[25%] lg:pl-[9vw]">
                   <div className="mx-auto w-[90%] text-[#2A374A] font-Playfair-bold text-[54px] md:text-[95px]">
                     <h1 className="drop-shadow-[-8px_2px_10px_rgba(22,22,22,0.6)] lg:drop-shadow-[-8px_2px_10px_rgba(22,22,22,0.25)] mb-[-25px] lg:mb-[-50px]">KPUFT</h1>
                     <h1 className="drop-shadow-[-8px_2px_10px_rgba(22,22,22,0.7)] lg:drop-shadow-[-8px_2px_10px_rgba(22,22,22,0.25)]">UGM <span className="text-5xl lg:text-[85px]">2022</span></h1>
@@ -168,14 +168,14 @@ export default function Hero() {
             </div>
           </div>  
 
-          <div id='toast_success' className='absolute w-[400px] h-[64px] top-[-10vh] left-[50%] -ml-[200px] transition-all duration-[1000ms] flex justify-center'>
-              <div className='bg-[#355D3B] w-[90%] h-full flex items-center justify-start rounded-[12px] shadow-[0px_10px_25px_1px_rgba(17,52,23,0.3)]'>
+          <div id='toast_success' className='absolute w-[500px] h-[48px] top-[-10vh] left-[50%] -ml-[200px] transition-all duration-[1000ms] flex justify-center'>
+              <div className='bg-[#355D3B] w-[100%] h-full flex items-center justify-start rounded-[12px] shadow-[0px_10px_25px_1px_rgba(17,52,23,0.3)]'>
                   <img src={iconCheck} alt = "iconCheck" className='mx-[20px] w-[8%]'/>
                   <p className='font-Lato font-bold text-[#FFFFFF] text-[20px]'>Success :<span className='font-normal'> Your login is successfull</span></p>
               </div>
           </div>
 
-          <div id='toast_failed' className='absolute w-[400px] h-[64px] top-[-10vh] left-[50%] -ml-[200px] transition-all duration-[1000ms] flex justify-center'>
+          <div id='toast_failed' className='absolute w-[400px] h-[48px]  left-[50%] -ml-[200px] transition-all duration-[1000ms] flex justify-center'>
               <div className='bg-[#8A2D2D] w-[90%] h-full flex items-center justify-start rounded-[12px] shadow-[0px_10px_25px_1px_rgba(17,52,23,0.3)]'>
                   <img src={warningCircle} alt = "iconCheck" className='mx-[20px] w-[8%]'/>
                   <p className='font-Lato font-bold text-[#FFFFFF] text-[20px]'>Error :<span className='font-normal'> Your login is Failed</span></p>

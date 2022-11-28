@@ -78,9 +78,9 @@ function Terimakasih() {
         <Kritik />
       </div>
 
-      <div id='toast_success' className='absolute w-[400px] h-[64px] top-[-10vh] left-[50%] -ml-[200px] transition-all duration-[1000ms]'>
-            <div className='bg-[#355D3B] w-full h-full flex items-center justify-center rounded-[12px] shadow-[0px_10px_25px_1px_rgba(17,52,23,0.3)]'>
-                <img src={Check} alt = "iconCheck"/>
+      <div id='toast_success' className='absolute w-[500px] h-[48px] top-[-10vh] left-[50%] -ml-[200px] transition-all duration-[1000ms] flex justify-center'>
+            <div className='bg-[#355D3B] w-[100%] h-full flex items-center justify-start rounded-[12px] shadow-[0px_10px_25px_1px_rgba(17,52,23,0.3)]'>
+                <img src={Check} alt = "iconCheck" className='mx-[20px] w-[8%]'/>
                 <p className='font-Lato font-bold text-[#FFFFFF] text-[20px]'>Success :<span className='font-normal'> Your account is logged out</span></p>
             </div>
         </div>

@@ -11,7 +11,7 @@ import axios from 'axios';
 
 export default function Hero() {
 
-  const {isCompleted, setProfile, profile, clientId, setIsLogin, isChoose, isDPT, setIsDPT} = useContext(StateContext)
+  const {isCompleted, setProfile, profile, clientId, setIsLogin, isChoose, setIsChoose, isDPT, setIsDPT} = useContext(StateContext)
   let navigate = useNavigate();
   
   useEffect(() => {
@@ -27,8 +27,8 @@ export default function Hero() {
   // useEffect(() => {
   //   if (isLogin) {
 
-  function login(){
-     axios({
+  async function login(){
+     await axios({
       baseURL: process.env.REACT_API_URL || "https://env-1613447.user.cloudjkt01.com",
       method: "GET",
       url:`/users/email/${profile.email}`,
@@ -51,17 +51,35 @@ export default function Hero() {
         }
     });
 
-    if(!isChoose){
-      navigate('/vote')
-    }
-    else{
-      navigate('/terimakasih')
-    }
+    await axios({
+      baseURL: process.env.REACT_API_URL || "https://env-1613447.user.cloudjkt01.com",
+      method: "GET",
+      url:`/pemilih/${profile.email}`,
+    })
+    .then((response) => {
+      setIsLogin(true)
+      if(response.data.Email === undefined) {
+        setIsChoose(false)
+        navigate('/vote')
+      }
+      else{
+        setIsChoose(true)
+        navigate('/terimakasih')
+      }
+
+    })
+    .catch((error) => {
+      if (error.response) {
+        console.log(error.response)
+        console.log(error.response.status)
+        console.log(error.response.headers)
+        }
+    });
   }
 
   useEffect(() => {
       
-  }, [profile, isDPT]);
+  }, [profile, isDPT, isChoose]);
 
   const onSuccess = (res) => {
     setProfile(res.profileObj);

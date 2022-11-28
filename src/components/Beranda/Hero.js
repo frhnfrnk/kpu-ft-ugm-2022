@@ -11,7 +11,7 @@ import axios from 'axios';
 
 export default function Hero() {
 
-  const {isCompleted, setProfile, profile, clientId, isLogin, setIsLogin, isChoose, setIsChoose, isDPT, setIsDPT} = useContext(StateContext)
+  const {isCompleted, setProfile, profile, clientId, setIsLogin, isChoose, setIsChoose, isDPT, setIsDPT} = useContext(StateContext)
   let navigate = useNavigate();
   
   useEffect(() => {
@@ -27,8 +27,8 @@ export default function Hero() {
   // useEffect(() => {
   //   if (isLogin) {
 
-  async function login(){
-     await axios({
+  function login(){
+     axios({
       baseURL: process.env.REACT_API_URL || "https://env-1613447.user.cloudjkt01.com",
       method: "GET",
       url:`/users/email/${profile.email}`,
@@ -51,7 +51,7 @@ export default function Hero() {
         }
     });
 
-    await axios({
+    axios({
       baseURL: process.env.REACT_API_URL || "https://env-1613447.user.cloudjkt01.com",
       method: "GET",
       url:`/pemilih/${profile.email}`,
@@ -79,7 +79,7 @@ export default function Hero() {
 
   useEffect(() => {
       
-  }, [profile, isDPT, isChoose, isLogin]);
+  }, [profile, isDPT, isChoose]);
 
   const onSuccess = (res) => {
     setProfile(res.profileObj);

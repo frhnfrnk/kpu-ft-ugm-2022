@@ -28,7 +28,7 @@ export default function Percent () {
     }, []);
     const DemoRingProgress = () => {
         const database = (data[8]?.Count/data[8]?.Jumlah).toFixed(2);
-        console.log(database);
+        // console.log(database);
        const config = {
          autoFit: false,
          percent: database,
@@ -45,7 +45,7 @@ export default function Percent () {
        };
        return <RingProgress {...config} style={{height:"14vw", width:"full"}}/>;
      };
-     console.log(data)
+    //  console.log(data)
     return(
         <div className="h-[50vh] w-full lg:mt-[5vh] xl:mt-[20vh]">
             <div className='xl:w-2/3 lg:w-4/5 w-full mx-auto h-[60vh] mt-[5vh]'>

@@ -4,7 +4,7 @@ export const StateContext = createContext()
 
 export const StateProvider = props => {
 
-    const [isCompleted, setIsCompleted] = useState(true)
+    const [isCompleted, setIsCompleted] = useState(false)
     const [isCloseVote, setIsCloseVote] = useState(false)
     const [profile, setProfile] = useState([])
     const [isLogin, setIsLogin] = useState(false)

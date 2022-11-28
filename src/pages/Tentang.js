@@ -16,17 +16,17 @@ export default function Tentang() {
       </Helmet>
       {/* bagian tentang kami */}
       <div className="bg-cover bg-[#E1DAD1]">
-        <div className="bg-cover w-full bg-no-repeat w-full lg:h-[100vh] h-[85vh] " style={{ backgroundImage: "url(" + Backbaru + ")" }}>
+        <div className="bg-cover w-full bg-no-repeat w-full lg:h-[100vh] h-[85vh] flex justify-center items-center flex-col" style={{ backgroundImage: "url(" + Backbaru + ")" }}>
           <Fade top>
             <h1
-              className="w-full pt-[20vh] text-center text-[28px] lg:text-[50px] font-Playfair text-[#2A374A] font-bold lg:pt-[150px] lg:mb-[28px] leading-[
+              className="w-full text-center text-[28px] lg:text-[50px] font-Playfair text-[#2A374A] font-bold lg:mb-[28px] leading-[
                   37.32px] mb-[20px]"
             >
               Tentang Kami
             </h1>
           </Fade>
           <Zoom>
-            <img src="/Logo_KPU.jpg" className="m-auto lg:w-[240px] lg:h-[240px] w-[148px] h-[148px]" alt="logokpu" />
+            <img src="/Logo_KPU.jpg" className="m-0 lg:w-[240px] lg:h-[240px] w-[148px] h-[148px]" alt="logokpu" />
           </Zoom>
           <Fade bottom>
             <div>

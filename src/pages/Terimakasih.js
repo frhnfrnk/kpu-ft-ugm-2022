@@ -51,9 +51,10 @@ function Terimakasih() {
           </div> */}
           <div className="flex justify-center items-center space-x-5">
             <Fade left>
-              <Link to="https://docs.google.com/forms/u/1/d/e/1FAIpQLSf3qNG8v0EON4PKfWrXQcT38a0xxSlYf06r010BLJgL5G32ng/viewform?usp=sf_link" className="flex justify-center items-center">
+              <a target="blank" href="https://docs.google.com/forms/u/1/d/e/1FAIpQLSf3qNG8v0EON4PKfWrXQcT38a0xxSlYf06r010BLJgL5G32ng/viewform?usp=sf_link" className="flex justify-center items-center">
                 <button className={`h-[auto] w-[auto] py-[8px] px-[30px] text-white font-bold font-Lato text-[16px] rounded-full bg-gradient-to-r from-[#8A2D2D] to-[#6E2424] shadow-[0px_4px_5px_rgba(110,36,36,0.1),0px_4px_10px_rgba(55,18,18,0.25)] hover:bg-gradient-to-r hover:from-[#E1DAD1] hover:to-[#E1DAD1] hover:text-[#8A2D2D] hover:shadow-[0px_7px_20px_rgba(110,36,36,0.15),0px_10px_25px_1px_rgba(55,18,18,0.45)] transition-all active:bg-gradient-to-r active:from-[#BFB196] active:to-[#BFB196] active:shadow-[0px_7px_20px_rgba(110,36,36,0.15),0px_10px_25px_1px_rgba(55,18,18,0.45)] active:border-none`}>Evaluasi</button>
-                </Link>
+                </a>
+                {/*  */}
             </Fade>
             <Fade right>
               <GoogleLogout 

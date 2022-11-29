@@ -42,7 +42,7 @@ export default function Calon() {
                 </div>
               </div>            
             </div> */}
-            <div className="flex flex-col lg:flex-row justify-center items-center lg:justify-around w-[60%] h-[60%] lg:h-[40%] mx-auto mt-[10vmin] lg:mt-[6vmin] mb-[8rem] lg:mb-0">
+            <div className="flex flex-col lg:flex-row justify-center items-center lg:justify-around w-[60%] h-[60%] lg:h-[40%] mx-auto mt-[10vmin] lg:mt-[6vmin] mb-[8rem] lg:mb-5">
               <Fade left>
                 <div className="w-full lg:w-1/2 flex flex-col justify-center items-center cursor-pointer group transition-all  lg:pr-[5%]" onClick={() => {setIsOpen1(true)}}> 
                     <img src={Frame_Calon2} className="w-full md:w-[85%]" alt="calon_2"/>
@@ -60,7 +60,7 @@ export default function Calon() {
                 </div>  
               </Fade>  
             </div>
-            {isCompleted ? <Button to="/vote" text="Vote Sekarang" sizeText="20px"/> : 
+            {isCompleted ? <Button to="/" text="Vote Sekarang" sizeText="20px" className=""/> : 
               <Fade bottom>
                 <div className="flex justify-center">
                   <button href="#" className="bg-gradient-to-r from-[#959595] to-[#959595] text-[#FFFFFF] rounded-full px-6 py-2 font-semibold shadow-[0px_4px_10px_rgba(55,18,18,0.25)] cursor-default">Vote Ditutup</button>

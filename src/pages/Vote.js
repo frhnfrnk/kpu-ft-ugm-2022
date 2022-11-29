@@ -4,8 +4,6 @@ import Frame_Calon from "../assets/Calon/Frame_Calon.png";
 import Frame_Calon2 from "../assets/Calon/Frame_Calon2.png";
 import lineFooter from "../assets/decoration/line_bottom.png";
 
-import CheckSquare from "../assets/ToastMessage/CheckSquare.png";
-import Warning from "../assets/ToastMessage/Warning.png";
 
 import { useState } from "react";
 import { useContext } from "react";
@@ -148,6 +146,15 @@ export default function Vote() {
                     </div>
                   </div>
                 </Fade>  
+              </div>
+              <div className="w-auto mt-[10vh] flex justify-center">
+                <GoogleLogout 
+                  clientId={clientId} 
+                  buttonText=""
+                    render={renderProps => (
+                      <button onClick={renderProps.onClick} disabled={renderProps.disabled}  className="bg-gradient-to-r from-[#8A2D2D] to-[#6E2424] text-[#FFFFFF] rounded-full px-8 py-2 font-semibold shadow-[0px_4px_10px_rgba(55,18,18,0.25)] hover:bg-gradient-to-r hover:from-[#E1DAD1] hover:to-[#E1DAD1] hover:text-[#8A2D2D] hover:shadow-[0px_7px_20px_rgba(110,36,36,0.15),0px_10px_25px_1px_rgba(55,18,18,0.45)] active:bg-gradient-to-r active:from-[#BFB196] active:to-[#BFB196] active:shadow-[0px_7px_20px_rgba(110,36,36,0.15),0px_10px_25px_1px_rgba(55,18,18,0.45)] active:border-none transition-all">Log Out</button>
+                    )}
+                  onLogoutSuccess={logOut} />
               </div>
           </div> 
           :

@@ -27,11 +27,11 @@ export default function Percent () {
           });
     }, []);
     const DemoRingProgress = () => {
-        const database = (data[8]?.Count/data[8]?.Jumlah).toFixed(2);
-        // console.log(database);
+        const database = (data[8]?.Count/data[8]?.Jumlah*100).toFixed(2);
+        // console.log(typeof(database));   
        const config = {
          autoFit: false,
-         percent: database,
+         percent: (database/100),
          color: ['#8A2D2D', '#BFB196'],
          statistic: {
              title: {

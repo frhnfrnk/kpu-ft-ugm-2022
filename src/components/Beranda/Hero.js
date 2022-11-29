@@ -13,7 +13,7 @@ import axios from 'axios';
 
 export default function Hero() {
 
-  const {isCompleted, setProfile, profile, clientId, setIsLogin, isLogin, isChoose, setIsChoose, isDPT, setIsDPT} = useContext(StateContext)
+  const {isCompleted, setProfile, profile, clientId, setIsLogin, isLogin, isChoose, setIsChoose, isDPT, setIsDPT, isClose} = useContext(StateContext)
   let navigate = useNavigate();
   
   useEffect(() => {
@@ -114,8 +114,11 @@ export default function Hero() {
                   <p className="mx-auto w-[90%] text-[#6E2424] font-['Lato'] text-[12px] font-bold text-base">29 November - 1 Desember 2022</p>    
                   <div className="mx-auto w-[90%] mt-4 space-x-4">
                     
-                    {isCompleted ? 
+                    {isClose ? 
                     // <button onClick={renderProps.onClick} disabled={renderProps.disabled} className="bg-gradient-to-r from-[#8A2D2D] to-[#6E2424] text-[#FFFFFF] rounded-full px-4 py-2 font-semibold shadow-[0px_4px_10px_rgba(55,18,18,0.25)] hover:bg-gradient-to-r hover:from-[#E1DAD1] hover:to-[#E1DAD1] hover:text-[#8A2D2D] hover:shadow-[0px_7px_20px_rgba(110,36,36,0.15),0px_10px_25px_1px_rgba(55,18,18,0.45)] active:bg-gradient-to-r active:from-[#BFB196] active:to-[#BFB196] active:shadow-[0px_7px_20px_rgba(110,36,36,0.15),0px_10px_25px_1px_rgba(55,18,18,0.45)] active:border-none transition-all">Vote Sekarang!</button> 
+                    <button href="#" className="bg-gradient-to-r from-[#959595] to-[#959595] text-[#FFFFFF] lg:text-[16px] text-[14px] rounded-full px-6 py-2 font-semibold shadow-[0px_4px_10px_rgba(55,18,18,0.25)] cursor-default">Vote Ditutup</button>
+                    
+                    : 
                     <GoogleLogin
                               clientId={clientId}
                               buttonText=""
@@ -127,8 +130,6 @@ export default function Hero() {
                               cookiePolicy={'single_host_origin'}
                               isSignedIn={true}
                           />
-                    : 
-                    <button href="#" className="bg-gradient-to-r from-[#959595] to-[#959595] text-[#FFFFFF] lg:text-[16px] text-[14px] rounded-full px-6 py-2 font-semibold shadow-[0px_4px_10px_rgba(55,18,18,0.25)] cursor-default">Vote Ditutup</button>
                     }
 
                     

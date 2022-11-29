@@ -11,6 +11,7 @@ export const StateProvider = props => {
     const [isChoose, setIsChoose] = useState(false)
     const [isRegistered, setIsRegistered] = useState(false)
     const [isDPT, setIsDPT] = useState(false)
+    const [isClose, setIsClose] = useState(false)
     const clientId = '449519521276-2959vrk76er8jcqobo5pjn7q2plvh7ih.apps.googleusercontent.com'
 
     return (
@@ -22,7 +23,8 @@ export const StateProvider = props => {
             isLogin, setIsLogin,
             isChoose, setIsChoose,
             isRegistered, setIsRegistered,
-            isDPT, setIsDPT
+            isDPT, setIsDPT,
+            isClose, setIsClose
             }}>
             {props.children}
         </StateContext.Provider>

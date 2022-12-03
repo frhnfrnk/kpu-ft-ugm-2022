@@ -79,10 +79,17 @@ body::-webkit-scrollbar-thumb {
   background-image: url("../public/imgKritik/bgcalon.png");
 }
 
+.bg-result{
+  background-image: url("../public/Beranda/Result.png");
+}
+
 @media screen and (max-width: 768px) {
   .bgLetter{
     background-image: url("../src/assets/decoration/letter.png");
     
+  }
+  .bg-result{
+    background-image: url("../public/Beranda/rsult-2.png");
   }
 }
   

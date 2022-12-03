@@ -47,7 +47,7 @@ export default function Percent () {
      };
     //  console.log(data)
     return(
-        <div className="h-[50vh] w-full lg:mt-[5vh] xl:mt-[20vh]">
+        <div className="h-[50vh] w-full lg:mt-[5vh] xl:mt-[5vh]">
             <div className='xl:w-2/3 lg:w-4/5 w-full mx-auto h-[60vh] mt-[5vh]'>
                 <div className='w-full h-full bg-no-repeat bg-contain 2xl:bg-cover pt-1' style={{ backgroundImage: "url(Beranda/Percent/Presentase.png)" }}>
                     <div className='justify-item-center place-content-center lg:mt-[5vh] mt-[2vh]'>

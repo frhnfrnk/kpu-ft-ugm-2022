@@ -5,6 +5,7 @@ import Tentang from "../components/HomePage/about";
 import Tutor from "../components/HomePage/tutor";
 import Calonnew from "../components/HomePage/calonnew";
 import Percent from "../components/Beranda/Percent";
+import Result from "../components/Beranda/Result";
 function Beranda() {
   return (
     <>
@@ -12,6 +13,7 @@ function Beranda() {
     <Hero/>
     <Countdown />
     <Calonnew />
+    <Result />
     <Percent/>
     <Tentang />
     <Tutor />
